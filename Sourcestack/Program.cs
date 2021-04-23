@@ -7,7 +7,6 @@ namespace Sourcestack
 
         static void Main(string[] args)
         {
-            byte a = 255;
             byte b = 255;
             byte c = 255;
 
