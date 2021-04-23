@@ -13,9 +13,6 @@ namespace Sourcestack
             byte w = 255;
             byte g = 255;
 
-
-            Console.WriteLine();
-            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
