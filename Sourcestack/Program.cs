@@ -10,7 +10,6 @@ namespace Sourcestack
             byte a = 255;
             byte b = 255;
             byte c = 255;
-            byte e = 255;
 
 
             Console.WriteLine();
