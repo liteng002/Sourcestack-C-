@@ -118,8 +118,6 @@ namespace Sourcestack
 
 
 
-
-
             ///利用ref调用Swap()方法交换两个同学的床位号
             //int upper = 9;
             //int lower = 1;
