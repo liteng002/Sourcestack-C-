@@ -146,16 +146,51 @@ namespace Sourcestack
         //    return;
         //}
 
-        //没写呢
+        //   不知道什么原理
         //将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
         //true / false，表示登陆是否成功
         //string，表示登陆失败的原因
-        
+        //static bool LogOn(string verification, string name, string password, out string why)
+        //{
+        //    why = "验证码错误";
+        //    Console.WriteLine($"请输入验证码{verification}");
+        //    if (verification != Console.ReadLine())
+        //    {
+        //        Console.WriteLine(why);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"请输入用户名{name}");
+        //        if (name != Console.ReadLine())
+        //        {
+        //            why = "用户名错误";
+        //            Console.WriteLine(why);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"请输入密码{password}");
+        //            if (password != Console.ReadLine())
+        //            {
+        //                why = "密码错误";
+        //                Console.WriteLine(why);
+        //            }
+        //            else
+        //            {
+        //                why = "登陆成功";
+        //                Console.WriteLine(why);
+        //            }
+        //        }
+        //    }
+        //    return true;
+        //}
 
         static void Main(string[] args)
-
         {
-           // array();
+           // LogOn("ut91", "叶子", "yefei", out string why);
+           
+
+
+            // array();
 
 
 
@@ -244,45 +279,6 @@ namespace Sourcestack
             //Console.WriteLine(result);
 
 
-            ///https://17bang.ren/Article/263
-            //观察一起帮登录页面，用if...else ...完成以下功能。
-            //用户依次由控制台输入：验证码、用户名和密码：
-            //如果验证码输入错误，直接输出：“*验证码错误”；
-            //如果用户名不存在，直接输出：“*用户名不存在”；
-            //如果用户名或密码错误，输出：“*用户名或密码错误”
-            //以上全部正确无误，输出：“恭喜！登录成功！”
-
-
-            //Console.WriteLine("请输入验证码（ut91）：");
-            //string input = "ut91";
-            //if (input == Console.ReadLine())
-            //{
-            //    Console.WriteLine("请输入用户名（叶子）");
-            //    input = "叶子";
-            //    if (input == Console.ReadLine())
-            //    {
-            //        Console.WriteLine("请输入密码（yefei）");
-            //        input = "yefei";
-            //        if (input == Console.ReadLine())
-            //        {
-            //            input = "恭喜，登录成功";
-            //        }
-            //        else
-            //        {
-            //            input = "用户名或密码错误";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        input = "用户名不存在";
-            //    }
-            //}
-            //else
-            //{
-            //    input = "* 验证码错误";
-            //}
-
-            //Console.WriteLine(input);
 
 
 
