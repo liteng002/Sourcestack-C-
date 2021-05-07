@@ -80,7 +80,7 @@ namespace Sourcestack
         //    }
         //}
 
-
+        ///利用ref调用Swap()方法交换两个同学的床位号
         //static int Swap(ref int upper, ref int lower)
         //{
 
@@ -100,18 +100,70 @@ namespace Sourcestack
         //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
         //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
         //  如果找到，返回该元素所在的下标；否则，返回 - 1
+        //static int BinarYseek(int[] numbers, int target)
+        //{
+        //    int reft = 0, right = numbers.Length-1;
+        //    while (reft <= right)
+        //    {
+        //        int middle = (reft + right) / 2;
+        //        if (target == numbers[middle])
+        //        {
+        //            return middle;
+        //        }
+        //        else        if (target > numbers[middle])
+        //        {
+        //            reft = middle + 1;
+        //        }
+        //        else if (target < numbers[middle])
+        //        {
+        //            right = middle - 1;
+        //        } // else  nothing          
+        //    }
+        //    return -1;
+        //}
 
+        //  
+        ///https://17bang.ren/Article/641
+        // 定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
+        //最小值min（默认为1）
+        //相邻两个元素之间的最大差值gap（默认为5） 
+        //元素个数length（默认为10个）
+        //static void array(int min = 1,int lengh = 10,int gap = 5)
+        //{
+        //    int[] GetArray = new int[lengh];
+        //    for (int i = 0; i < GetArray.Length; i++)
+        //    {
+        //        if (i == 0)
+        //        {
+        //            GetArray[i] = min;
+        //        }
+        //        else
+        //        {
+        //            GetArray[i] = new Random().Next(gap) + GetArray[i - 1];
+        //        }
+        //        Console.WriteLine(GetArray[i]);
+        //    }
+        //    return;
+        //}
 
-
+        //没写呢
+        //将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
+        //true / false，表示登陆是否成功
+        //string，表示登陆失败的原因
+        
 
         static void Main(string[] args)
 
         {
+           // array();
 
 
 
 
-
+            //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
+            //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
+            //  如果找到，返回该元素所在的下标；否则，返回 - 1
+            // Console.WriteLine(BinarYseek(new int[] { 13, 24, 35, 46, 57, 68 }, 4));
 
 
 
@@ -173,6 +225,7 @@ namespace Sourcestack
 
             //int j = 20;
             //Console.WriteLine($"{i}+{j}={i + j}");     //算的是true,算错了
+
 
 
             //  想一想如下代码的结果是什么，并说明原因：  按照运算符等级来算 （）> () > ! > || > &&
@@ -409,8 +462,6 @@ namespace Sourcestack
             //}
 
 
-            ///https://17bang.ren/Article/299
-            ///将之前作业封装成方法（自行思考参数和返回值），并调用执行。且以后作业，如无特别声明，皆需使用方法封装。
 
 
 
@@ -421,22 +472,26 @@ namespace Sourcestack
 
 
 
-            //将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
-            //true / false，表示登陆是否成功
-            //string，表示登陆失败的原因
 
 
 
 
-            ///https://17bang.ren/Article/641
-            //            定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
-            //最小值min（默认为1）
-            //相邻两个元素之间的最大差值gap（默认为5） 
-            //元素个数length（默认为10个）
+
+            //元组作业
+            //https://17bang.ren/Article/638
+            //           1. 使用tuple作为参数，重构SelfIntroduction()方法，输出自我介绍
+            //2.实现方法：
+            //IndexOf()，通过遍历在无序数组中
+            //BinarySearch()，通过二分查找法在一个有序数组中
+            //找到某个值的下标，找不到返回 - 1
 
 
-
-
+            //https://17bang.ren/Article/305
+            //            1.观察“一起帮”的：
+            //1.(1)注册 / 登录功能，定义一个User类，包含字段：Name（用户名）、Password（密码）和 邀请人（InvitedBy），和方法：Register()、Login()
+            //1.(2)求助版块，定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）、发布时间（PublishDateTime）和作者（Author），和方法Publish()
+            //1.(3)帮帮币版块，定义一个类HelpMoney，表示一行帮帮币交易数据，包含你认为应该包含的字段和方法
+            //2.为这些类的字段和方法设置合适的访问修饰符。
 
 
             Console.ReadLine();
