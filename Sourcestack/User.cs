@@ -6,14 +6,37 @@ namespace Sourcestack
 {
     class User
     {
-        static string name,Password,LnvitedBy;
-        static void Register() 
-        { 
-        
+
+        public string _name;
+        static string _LnvitedBy;
+        public string name
+        {
+            get { return _name; }
+            set
+            {
+                if (value == "admin")// 如果user.Name为“admin”，输入时修改为“系统管理员”
+                {
+                    _name = "系统管理员";
+                }
+                else
+                {
+                    _name = value;
+                }
+            }
+        }
+        public string _password        //1.user.Password在类的外部只能改不能读
+        {
+            set { }
+        }
+
+
+        static void Register()
+        {
+
         }
         static void Loginn()
-        { 
-        
+        {
+
         }
     }
 }
