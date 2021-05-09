@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+//没写
+//设计一种方式，保证：
+//每一个Problem对象一定有Body赋值
+//每一个User对象一定有Name和Password赋值
 
 namespace Sourcestack
 {

@@ -134,70 +134,58 @@ namespace Sourcestack
         //将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
         //true / false，表示登陆是否成功
         //string，表示登陆失败的原因
-        //static bool LogOn(string verification, string name, string password, out string why)
+        //static bool LogOn(string name, string password, out string why)
         //{
-        //    why = "验证码错误";
-        //    Console.WriteLine($"请输入验证码{verification}");
-        //    if (verification != Console.ReadLine())
+
+        //   why = "用户名不存在";
+        //    if (name != "叶子" && password != "yefei")
         //    {
-        //        Console.WriteLine(why);
+        //        //why = "用户名不存在";
         //    }
-        //    else
+        //    else if (name == "叶子" && password != "yefei")
         //    {
-        //        Console.WriteLine($"请输入用户名{name}");
-        //        if (name != Console.ReadLine())
-        //        {
-        //            why = "用户名错误";
-        //            Console.WriteLine(why);
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine($"请输入密码{password}");
-        //            if (password != Console.ReadLine())
-        //            {
-        //                why = "密码错误";
-        //                Console.WriteLine(why);
-        //            }
-        //            else
-        //            {
-        //                why = "登陆成功";
-        //                Console.WriteLine(why);
-        //            }
-        //        }
+        //        why = "密码错误";
         //    }
-        //    return true;
+        //    else if (name == "叶子" && password == "yefei")
+        //    {
+        //        why = "登录成功";
+        //        return true;
+        //    }//else nothing  
+        //    return false;
         //}
-
-
-
         static void Main(string[] args)
-
         {
-            User password = new User();
-            password._password = "1234";
+            //Console.WriteLine("请输入用户名和密码");
+            //bool successful = LogOn(Console.ReadLine(), Console.ReadLine(), out string why);
+            //Console.WriteLine(successful + why);
 
-            Sourcestack.User name = new User();
-            name.name = "admin";
-            Console.WriteLine(name.name);
+            //User password = new User();
+            //password._password = "1234";
 
-            Problem questions = new Problem();
-            Problem.Publish();
+            //Sourcestack.User name = new User();
+            //name.name = "admin";
+            //Console.WriteLine(name.name);
 
-            User account = new User();
-            account.Register();
+            //Problem questions = new Problem();
+            //Problem.Publish();
 
-            User successful = new User();
-            successful.Login();
+            //User account = new User();
+            //account.Register();
 
-            Problem heip = new Problem();
-            heip[1] = "C#";
+            //User successful = new User();
+            //successful.Login();
 
-            Console.WriteLine(heip[1]);
+            //Problem heip = new Problem();
+            //heip[1] = "C#";
+
+            //Console.WriteLine(heip[1]);
+
+
             //GetArray();
 
 
-            //  LogOn("ut91", "叶子", "yefei", out string why);
 
+            //Console.WriteLine(LogOn("叶子","yefei", out string why));
 
 
             // array();
