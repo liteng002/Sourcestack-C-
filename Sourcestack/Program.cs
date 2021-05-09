@@ -189,7 +189,10 @@ namespace Sourcestack
             User successful = new User();
             successful.Login();
 
+            Problem heip = new Problem();
+            heip[1] = "C#";
 
+            Console.WriteLine(heip[1]);
             //GetArray();
 
 
