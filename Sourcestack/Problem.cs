@@ -29,7 +29,10 @@ namespace Sourcestack
             }
 
         }
+        public Problem()
+        {
 
+        }
 
         public static string Publish()
 

@@ -28,13 +28,21 @@ namespace Sourcestack
         {
             set { }
         }
+       
 
-
-        static void Register()
+        public  string  Register()
+        {
+            return "";
+        }
+        public   User( string name)
         {
 
         }
-        static void Loginn()
+        public   bool Login()
+        {
+            return true;
+        }
+        public User()
         {
 
         }
