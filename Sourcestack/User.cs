@@ -10,14 +10,15 @@ namespace Sourcestack
     {
 
         public string _name;
+        private string _passwodr;
         static string _LnvitedBy;
 
-        public User(string name,string password) //每一个User对象一定有Name和Password赋值
+        public User(string name, string password) //每一个User对象一定有Name和Password赋值
         {
             _name = name;
-
+            _passwodr = password;
         }
-    
+
         public string name
         {
             get { return _name; }

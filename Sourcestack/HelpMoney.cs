@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sourcestack
 {
-    class HelpMoney
+    class HelpMoney:Entity
     {
         private int useable { get; set; }
         private int free { get; set; }

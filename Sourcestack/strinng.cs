@@ -1,6 +1,6 @@
 ﻿namespace Sourcestack
 {
-    internal class strinng
+    internal class strinng:Entity
     {
     }
 }

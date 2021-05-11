@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sourcestack
 {
-    public class Problem
+    public class Problem : Content
     {
 
         static string _Title { get; set; }
@@ -14,7 +14,7 @@ namespace Sourcestack
         internal string _Author { get; set; }
         public string[] _keyword { get; set; }
 
-        public Problem(string body)//每一个Problem对象一定有Body赋值
+        public Problem(string body, string kind) : base(kind)//每一个Problem对象一定有Body赋值
         {
             _Body = body;
         }
@@ -43,10 +43,7 @@ namespace Sourcestack
             set { _keyword[index - 1] = value; }
         }
 
-        public Problem()
-        {
-
-        }
+      
 
         public string Publish() //1.：发布一篇求助，并将其保存到数据库
         {

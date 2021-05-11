@@ -15,7 +15,7 @@ namespace Sourcestack
     //出/入栈检查，
     //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
     //如果已弹出所有数据，提示“栈已空”
-    class MimicStack
+    class MimicStack:Entity
     {
     }
 }
