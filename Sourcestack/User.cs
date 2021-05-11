@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-//没写
-//设计一种方式，保证：
-//每一个Problem对象一定有Body赋值
-//每一个User对象一定有Name和Password赋值
+
+
 
 namespace Sourcestack
 {
-    class User
+    sealed class User //1.让User类无法被继承
     {
 
         public string _name;
         static string _LnvitedBy;
+
+        public User(string name,string password) //每一个User对象一定有Name和Password赋值
+        {
+            _name = name;
+
+        }
+    
         public string name
         {
             get { return _name; }
@@ -32,17 +37,17 @@ namespace Sourcestack
         {
             set { }
         }
-       
 
-        public  string  Register()
+
+        public string Register()
         {
             return "";
         }
-        public   User( string name)
+        public User(string name)
         {
 
         }
-        public   bool Login()
+        public bool Login()
         {
             return true;
         }

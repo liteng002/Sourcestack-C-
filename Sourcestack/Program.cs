@@ -2,6 +2,11 @@
 
 namespace Sourcestack
 {
+    public class student
+    {
+        public int age;
+    }
+
     class Program
     {
         //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
@@ -153,8 +158,28 @@ namespace Sourcestack
         //    }//else nothing  
         //    return false;
         //}
+
+
+        public static void grow( student student)
+        {
+            student = new student();
+            student.age++;
+
+        }
+
+
         static void Main(string[] args)
         {
+            student lt = new student();
+            lt.age = 18;
+            grow( lt);
+
+
+            Console.WriteLine(lt.age);
+
+
+
+
             //Console.WriteLine("请输入用户名和密码");
             //bool successful = LogOn(Console.ReadLine(), Console.ReadLine(), out string why);
             //Console.WriteLine(successful + why);

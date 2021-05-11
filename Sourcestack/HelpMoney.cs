@@ -6,10 +6,17 @@ namespace Sourcestack
 {
     class HelpMoney
     {
-      
+        private int useable { get; set; }
+        private int free { get; set; }
+        private int change { get; set; }
+        public void gain(int num)
+        {
 
+        }
+        public void frees(int num)
+        {
 
+        }
     }
-
 }
 
