@@ -2,11 +2,38 @@
 
 namespace Sourcestack
 {
-    public class student
+    public abstract class student
     {
-        public int age;
+        public string Name { get; set; }
+        public abstract void grow();
+        public student(string name)
+        {
+
+        }
+    }
+    public class Ticha : Iinstructor, Iint
+    {
+        void Iinstructor.GO()
+        {
+            Console.WriteLine(23);
+        }
+
+        void Iint.GO()
+        {
+            Console.WriteLine(36);
+        }
     }
 
+
+    internal interface Iinstructor
+    {
+
+        void GO();
+    }
+    internal interface Iint
+    {
+        void GO();
+    }
     class Program
     {
         //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
@@ -74,8 +101,6 @@ namespace Sourcestack
         //        }
         //    }
         //}
-
-
         ///利用ref调用Swap()方法交换两个同学的床位号
         //static int Swap(ref int upper, ref int lower)
         //{
@@ -158,24 +183,13 @@ namespace Sourcestack
         //    }//else nothing  
         //    return false;
         //}
-
-
-        public static void grow( student student)
-        {
-            student = new student();
-            student.age++;
-
-        }
-
-
         static void Main(string[] args)
         {
-            student lt = new student();
-            lt.age = 18;
-            grow( lt);
+           
 
 
-            Console.WriteLine(lt.age);
+
+
 
 
 

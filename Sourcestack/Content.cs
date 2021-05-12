@@ -11,7 +11,7 @@ namespace Sourcestack
 
 
     //1.观察一起帮的求助（Problem）、文章（Article）和意见建议（Suggest），根据他们的特点，抽象出一个父类：内容（Content）
-    public class Content
+    public abstract class Content//抽象类
     {
         /*protected*/
         private string _kind;//Content中有一个字段：kind，记录内容的种类（problem/article/suggest等），只能被子类使用
@@ -32,6 +32,20 @@ namespace Sourcestack
 
         }
 
+     
 
     }
+
+  
+
+  
+
+
+
+
 }
+
+
+
+
+

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sourcestack
 {
-    public class Problem : Content
+    public class Problem : Content ,Ichange
     {
 
         static string _Title { get; set; }
@@ -58,7 +58,20 @@ namespace Sourcestack
         {
             return true;
         }
+
+        void Ichange.Agree()
+        {
+            throw new NotImplementedException();
+        }
+
+        void Ichange.Disagree()
+        {
+            throw new NotImplementedException();
+        }
+
         string _repoistory;  //4.可用于在底层实现上述方法和数据库的连接操作等
+
+      
 
 
     }
