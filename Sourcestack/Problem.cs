@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sourcestack
 {
-    public class Problem : Content ,Ichange
+    public class Problem : ContentService, Ichange
     {
 
         static string _Title { get; set; }
@@ -14,7 +14,7 @@ namespace Sourcestack
         internal string _Author { get; set; }
         public string[] _keyword { get; set; }
 
-        public Problem(string body, string kind) : base(kind)//每一个Problem对象一定有Body赋值
+        public Problem(string body, string kind) //每一个Problem对象一定有Body赋值
         {
             _Body = body;
         }
@@ -45,7 +45,7 @@ namespace Sourcestack
 
       
 
-        public string Publish() //1.：发布一篇求助，并将其保存到数据库
+        public string Publishs() //1.：发布一篇求助，并将其保存到数据库
         {
             return "";
 
@@ -57,6 +57,11 @@ namespace Sourcestack
         public bool Delete(int id)//3.根据Id删除某个求助
         {
             return true;
+        }
+        public override void Publish()
+        {
+            Console.ReadLine();
+            Console.WriteLine("需要消耗其设置悬赏数量的帮帮币");
         }
 
         void Ichange.Agree()

@@ -4,11 +4,16 @@ using System.Text;
 
 namespace Sourcestack
 {
-    public class Article : Content, Ichange
+    public class Article : ContentService, Ichange
     {
-        protected Article(string kind):base(kind)
+        protected Article(string kind)
         {
            
+        }
+        public override   void Publish()
+        {
+            Console.ReadLine();
+            Console.WriteLine("需要消耗一个帮帮币");
         }
 
         void Ichange.Agree()

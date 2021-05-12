@@ -16,9 +16,9 @@ namespace Sourcestack
 {
     public class ContentService
     {
-        public void Publish()
+        public virtual  void Publish()
         {
-
+            Console.WriteLine("存到数据库");
         }
 
     }

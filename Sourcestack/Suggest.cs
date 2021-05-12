@@ -4,11 +4,16 @@ using System.Text;
 
 namespace Sourcestack
 {
-    public class Suggest : Content, Ichange
+    public class Suggest : ContentService, Ichange
     {
-        protected Suggest(string kind) : base(kind)
+        protected Suggest(string kind) 
         {
 
+        }
+        public override  void Publish()
+        {
+            Console.ReadLine();
+            Console.WriteLine("不需要消耗帮帮币");
         }
 
         void Ichange.Agree()
@@ -22,4 +27,4 @@ namespace Sourcestack
         }
     }
 }
-}
+
