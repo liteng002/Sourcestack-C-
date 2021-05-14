@@ -12,6 +12,7 @@ namespace Sourcestack
         public string _name;
         private string _passwodr;
         static string _LnvitedBy;
+        private Token TokenManager { get; set; } //User类中添加一个Tokens属性，类型为TokenManager
 
         public User(string name, string password) //每一个User对象一定有Name和Password赋值
         {

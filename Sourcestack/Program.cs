@@ -2,38 +2,7 @@
 
 namespace Sourcestack
 {
-    public abstract class student
-    {
-        public string Name { get; set; }
-        public abstract void grow();
-        public student(string name)
-        {
 
-        }
-    }
-    public class Ticha : Iinstructor, Iint
-    {
-        void Iinstructor.GO()
-        {
-            Console.WriteLine(23);
-        }
-
-        void Iint.GO()
-        {
-            Console.WriteLine(36);
-        }
-    }
-
-
-    internal interface Iinstructor
-    {
-
-        void GO();
-    }
-    internal interface Iint
-    {
-        void GO();
-    }
     class Program
     {
         //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
@@ -183,15 +152,19 @@ namespace Sourcestack
         //    }//else nothing  
         //    return false;
         //}
+     
+   
+
         static void Main(string[] args)
         {
+            //源栈的学费是按周计费的，所以请实现这两个功能：
+            //函数GetDate()，
+            //2.给定任意一个年份，就能按周排列显示每周的起始日期，如下图所示：
+
+            //1.能计算一个日期若干（日 / 周 / 月）后的日期
            
-
-
-
-
-
-
+           
+          
 
 
 
