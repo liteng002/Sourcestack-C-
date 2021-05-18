@@ -3,7 +3,7 @@
 namespace Sourcestack
 {
 
-    class Program
+    public  class Program
     {
         //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
         //static double GetAverage(double[] scores)
@@ -28,48 +28,48 @@ namespace Sourcestack
         //如果8次之内猜中，输出：不错嘛！
         //10次还没猜中，输出：(～￣(OO)￣)ブ
         // 1-5 次  你真牛逼         6-8 次   不错嘛     9-10 次 猜中了哟     猜不中(～￣(OO)￣)ブ
-        //static void GuessMe()
-        //{
-        //    Console.WriteLine("请输入0-1000以内的一个数字");
-        //    int random = new Random().Next(0, 1000);
-        //    for (int i = 1; i <= 10; i++)
-        //    {
-        //        int input = int.Parse(Console.ReadLine());
+       public static void GuessMe()
+        {
+            Console.WriteLine("请输入0-1000以内的一个数字");
+            int random = new Random().Next(0, 1000);
+            for (int i = 1; i <= 10; i++)
+            {
+                int input = int.Parse(Console.ReadLine());
 
-        //        if (input == random)
-        //        {
-        //            if (i <= 5)
-        //            {
-        //                Console.WriteLine($"你真牛逼只用了{ i}次");
-        //            }
-        //            else if (i <= 8)
-        //            {
-        //                Console.WriteLine($"不错嘛只用了{ i}次");
-        //            }
-        //            else if (i <= 10)
-        //            {
-        //                Console.WriteLine($"猜中了哟只用了{ i}次");
-        //            }
-        //            return;
-        //        }
-        //        else if (input != random)
-        //        {
-        //            if (i == 10)
-        //            {
-        //                Console.WriteLine("(～￣(OO)￣)ブ");
-        //                return;
-        //            }
-        //            if (input > random)
-        //            {
-        //                Console.WriteLine($"太大了哟还剩{10 - i}次");
-        //            }
-        //            else //input < random
-        //            {
-        //                Console.WriteLine($"太小了呢还剩{10 - i}次");
-        //            }
-        //        }
-        //    }
-        //}
+                if (input == random)
+                {
+                    if (i <= 5)
+                    {
+                        Console.WriteLine($"你真牛逼只用了{ i}次");
+                    }
+                    else if (i <= 8)
+                    {
+                        Console.WriteLine($"不错嘛只用了{ i}次");
+                    }
+                    else if (i <= 10)
+                    {
+                        Console.WriteLine($"猜中了哟只用了{ i}次");
+                    }
+                    return;
+                }
+                else if (input != random)
+                {
+                    if (i == 10)
+                    {
+                        Console.WriteLine("(～￣(OO)￣)ブ");
+                        return;
+                    }
+                    if (input > random)
+                    {
+                        Console.WriteLine($"太大了哟还剩{10 - i}次");
+                    }
+                    else //input < random
+                    {
+                        Console.WriteLine($"太小了呢还剩{10 - i}次");
+                    }
+                }
+            }
+        }
         ///利用ref调用Swap()方法交换两个同学的床位号
         //static int Swap(ref int upper, ref int lower)
         //{
@@ -152,20 +152,38 @@ namespace Sourcestack
         //    }//else nothing  
         //    return false;
         //}
-     
-   
 
-        static void Main(string[] args)
+        static DateTime GetDate(DateTime start, int amount, Count unit)
         {
+            switch (unit)
+            {
+                case Count.day:
+                    return start.AddDays(amount);
+                case Count.week:
+                    return start.AddDays(amount * 7);
+                case Count.year:
+                    return start.AddYears(amount);
+                default:
+                    return new DateTime(); ;
+            }
+
+        }
+
+       public  static void Main(string[] args)
+        {
+
             //源栈的学费是按周计费的，所以请实现这两个功能：
             //函数GetDate()，
             //2.给定任意一个年份，就能按周排列显示每周的起始日期，如下图所示：
 
-            //1.能计算一个日期若干（日 / 周 / 月）后的日期
-           
-           
-          
+            // 1.能计算一个日期若干（日 / 周 / 月）后的日期
 
+            DateTime start = new DateTime(2019, 12, 1);
+           // string start = (DateTime.Now.ToString("yyyy年mm月dd日"));
+
+            //GetDate(start, 1, a);
+
+            Console.WriteLine(DateTime.Now.ToString("yyyy年MM月dd日"));
 
 
             //Console.WriteLine("请输入用户名和密码");
@@ -224,7 +242,7 @@ namespace Sourcestack
 
 
             //完成“猜数字”游戏，方法名GuessMe()：
-            //  GuessMe();
+            GuessMe();
 
             //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
             //Console.WriteLine(GetAverage(new double[] { 12.346, 34.764, 86.536, 995, 68.23 }));

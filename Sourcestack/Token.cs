@@ -11,6 +11,12 @@ namespace Sourcestack
         Blogger = 4,
         Newbie = 8,
         Registered = 16,
-       
+
+    }
+    enum Count
+    {
+        day,
+        week,
+        year,
     }
 }
