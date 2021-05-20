@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sourcestack\Sourcestack.csproj" />
+    <ProjectReference Include="..\Sourcestack\CSharp.csproj" />
   </ItemGroup>
 
 </Project>
