@@ -4,3 +4,11 @@
 .red{
     color:red;
 }
+
+
+a {
+    color: $link-color:black;
+    text-decoration: $link-decoration;
+    background-color: transparent;
+    /*// Remove the gray background on active links in IE 10.*/
+}

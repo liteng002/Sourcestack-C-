@@ -3,53 +3,200 @@
 <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon " type="image/ico" href="Lmage/log.ico" media="screen" />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/StyleSheet.css" />
+    <style>
+        * {
+            /*  border: 1px solid;*/
+        }
+    </style>
     <title>注册·一起帮</title>
-   
 </head>
 <body>
-    <header>
-        <p style="font-size:35px">注册</p>
-        <p style="text-align:right;background-color:aquamarine">返回</p>
-    </header>
-    <main>
-        <form method="post" action="Register.html">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label>为什么需要邀请</label><br />
-            <label>邀请人：（*必填，没有邀请人）</label><br />
-            <input type="text" name="username" placeholder="他的用户名，模糊查询只能从头开始" /><br />
-            <label>邀请码：（*必填）</label><br />
-            <input type="text" name="userinvite" placeholder="4位数字" /><br />
-            <label>用户名：(*必填）</label><br />
-            <input type="text" name=" username" placeholder="登录用户名，可修改，不能重复" /><br />
-            <label>密码：（*必填）</label><br />
-            <input type="password" name="userpassword" placeholder="不少于4个字符" /><br />
-            <label>验证密码：（*必填）</label><br />
-            <input type="password" name="userpasswprd" placeholder="和密码相同" /><br />
-            <label>验证码：（必填）</label><br />
-            <input type="text" size="4" />
-            <span>看不清楚</span><br />
-            <br /><button type="submit">提交</button>
-            <button type="reset">重置</button>
-            <button type="submit">登录</button>
-        </form>
-    </main>
+    <nav class="navbar navbar-light bg-light fixed-top ">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a class="navbar-brand" href="welcome.html">
+                        <!--//第一个问题：点击文字也进入链接了-->
+                        <img src="/Lmage/logo-big.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                        <span style="color:darkgrey">一起帮</span><span style="  font-size:16px;color:darkgray ">·网络互助平台</span><i class="fa fa-bell"></i>
+                    </a>
+                </div>
+                <div class="col" style="width:500px"></div>
+                <div class="col-6">
+                    <!--第二个问题：为什么是蓝色-->
+                    <!--忘记怎么在第三方改了-->
+                    <!--stylesheet第9行-->
+                    <ul class="nav  justify-content-end  ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class=" fa fa-question-circle"></i>求助</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class=" fa fa-eye"></i>督促</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class=" fa fa-book"></i>文章</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o">李腾</i></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-tachometer">后台</i></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container " style="padding-top:60px">
+        <div class="row">
+            <div class="col-sm">
+                <span><i class="fa fa-calendar"></i>  <i class="fa fa-thumbs-o-up"></i>欢迎</span>
+                <a href="User.html">小崽同学</a>
+                <a href="Faq/Faq.html">①</a>
+                <span>加入“一起帮”！记得完成“新手任务”获得</span>
+                <a href="Faq/Faq.html"><i class="fa fa-tint"> </i> 帮帮点 </a>
+                <span>  奖励哟。O(∩_∩)O~</span>
+                <a href="Message.html" style="margin-left: 300px"><i class="fa fa-hand-o-right"></i>   全部消息</a>
+            </div>
+        </div>
+    </div>
+    <div style="  height:10px  "></div>
 
-    <p style="font-size:25px">说明</p>
-    <ol>
-        <li>我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题。</li>
-        <li>现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？</li>
-        <li>当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。</li>
-        <li>公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献。</li>
-        <li>赶快加入我们，赚取帮帮币吧！</li>
-        <li> 了解更多</li>
-    </ol>
+    <!--第三个问题，返回需要扩大一点-->
+    <div>
+        <a href="#" style=" margin-left:85%;background-color:aquamarine ;border-bottom-left-radius:8px; "> <i class="fa fa-share"> 返回</i></a>
+    </div>
+    <div>
+        <h2 style="margin-left:6%"><i class="fa fa-registered ">注册</i></h2>
+    </div>
+    <hr style="width:85% " />
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-5">
+
+                <form style="border:1px dashed;background-color:beige">
+                    <div class="form-group">
+                        <a style="margin-left:68%"> <i class="fa fa-question-circle">为什么需要邀请</i>  </a>
+                        <label for="text">邀请人：（* 必填，没有邀请人）</label>
+                        <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp" placeholder="他的用户名，模糊查询只能从头开始">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">邀请码：（* 必填）</label>
+                        <input type="password" class="form-control" id="UserPassword" placeholder="4位数字">
+                    </div>
+                </form>
+                <hr class="w-100 invisible">
+
+                <form>
+                    <div class="form-group">
+                        <label for="text">用户名：（* 必填）</label>
+                        <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp" placeholder="登录用户名，可修改，不能重复">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：（* 必填）</label>
+                        <input type="password" class="form-control" id="UserPassword" placeholder="不少于4个字符">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">  验证密码：（* 必填）</label>
+                        <input type="password" class="form-control" id="UserPassword" placeholder="和密码相同">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">  验证码：（* 必填）</label><br />
+                        <input type="password" id="UserPassword " size="4">
+                        <span>点击输入框显示</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-primary">重置</button>
+                    <button type="submit" class="btn btn-primary" style="margin-left:55%"><i class="fa fa-sign-in">登录</i></button>
+                </form>
+            </div>
+            <div class="col-7">
+                <h3>  <i class=" fa fa-question-circle">说明</i> </h3>
+                <ol>
+                    <li>我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题。</li>
+                    <li> 现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？</li>
+                    <li> 现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？</li>
+                    <li> 现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？</li>
+                    <li> 现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？</li>
+                    <li> 了解更多</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <hr style="width:85% " />
+
+
+    <a style="<!--background-color:aquamarine;-->color:aquamarine; position:fixed;bottom:132px;right:42px;">帮助</a>
+    <a style="color:aquamarine;position:fixed;  bottom:80px;right:42px;">反馈</a>
 
 
 
-    
- 
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <p style="float:left;width:70%">
+
+                    <span style="color:blue">关于我们</span><span>&nbsp;|</span>
+                    <span style="color:blue">源站课堂</span><span>&nbsp;|</span>
+                    <span style="color:blue">常见问题</span><span>&nbsp;|</span>
+                    <span style="color:blue">意见建议</span><span>&nbsp;|</span>
+                    <span style="color:blue">历史通知</span><span>&nbsp;|</span>
+                    <span style="color:blue">诚邀合伙人</span>
+                </p>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="col">
+                <p style="float:right">
+                    <a href="http://www.miitbeian.gov.cn">渝ICP备18007191号（备案）</a>
+                    <span>© 2021- 自由</span><img src="Lmage/freeflying.ico" />
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
