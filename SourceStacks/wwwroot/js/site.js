@@ -2,3 +2,5 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
+
+alert("生如蝼蚁，应有不屈之心");
