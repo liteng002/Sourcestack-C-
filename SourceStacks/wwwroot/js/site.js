@@ -3,4 +3,12 @@
 
 // Write your Javascript code.
 
-alert("生如蝼蚁，应有不屈之心");
+//alert("生如蝼蚁，应有不屈之心");
+
+
+var problem = {     //观察“一起帮”的求助，定义一个problem对象，其中包含title、body、reward、needRemote等属性
+    title = "string",
+    body = "string",
+    reward = Number,
+    needRemote = Boolean,
+}
