@@ -12,3 +12,6 @@ var problem = {     //观察“一起帮”的求助，定义一个problem对象
     reward = Number,
     needRemote = Boolean,
 }
+
+
+
