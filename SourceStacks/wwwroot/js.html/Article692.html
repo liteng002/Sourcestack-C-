@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        'use strict';
+        //使用“模拟名称空间”技术，构建一个函数函数yz.fei.get(number)；
+        var yz = {};
+        yz = {
+            fei: function get(number) {
+                return --number;
+            }
+        };
+        
+        console.log(yz.fei(20));
+    </script>
+
+</head>
+
+<body>
+
+    <script src="/js/site.js"></script>
+</body>
+
+</html>

@@ -6,69 +6,123 @@
     <script>
         //1.构建函数
         //1.1 has9(number)，可以判断number中是否带有数字9；
-        //1.2 has8(number)，可以判断number中是否带有数字8；
-        //1.3 has6(number)，可以判断number中是否带有数字6；
+
+        //如果有返回qi下标
+        //function has9(number) {
+        //    var temp = number + '';
+        //    for (var i = 0; i < temp.length; i++) {
+        //        if (temp[i] == 9) {
+        //            return i;
+        //        }//else continue
+        //    }
+        //    return -1;
+        //}
+        //var a = has9(123890);
+        //console.log(a);
+        /////  1.2 has8(number)，可以判断number中是否带有数字8；
+        //function has8(number) {
+        //    var teemp = number + '';
+        //    for (var i = 0; i < teemp.length; i++) {
+        //        if (teemp[i] == 8) {
+        //            return i;
+        //        }//else cuntinue
+        //    }
+        //    return -1;
+        //}
+
+        //var results = has8(9876);
+        //console.log(result);
+
+        ////1.3 has6(number)，可以判断number中是否带有数字6；
+        //function has6(number) {
+        //    var temp = number + '';
+        //    for (var i = 0; i < temp.length; i++) {
+        //        if (temp[i] == 6) {
+        //            return i;
+        //        }
+        //    }
+        //    return -1;
+        //}
+        //var result = has6(4567);
+        //console.log(result);
+
         //1.4 让get986()通过调用has9()/has8()/has6()，能找出number以内有多少个数字包含：9或者8或6。
 
-
-        function has9(number) {
-
-            for (var i = 0; i < number.length; i++) {
-                if (number[i] == 4) {
-                    return number[i];
-                } 
-            }
-        }
-        console.log(has9([1, 2, 3, 8, 9]));
-
-
-        function has8(number) {
-
-            if (true) {
-
-            }
-            return number;
-
-        }
-        console.log(has8(5678));
-
-
         //2. 将之前“找出素数”的代码封装成一个函数findPrime(max)，可以打印出max以内的所有素数。
+        //输出1000以内的所有‘素数、质数’（只能被自己和1整除的数）
+        //for (var i = 2; i < 1000; i++) {
+        //    var prime = true;
+        //    for (var j = 2; j < i; j++) {
+        //        if (i % j == 0) {
+        //            prime = false;
+        //            break;
+        //        }
+        //    }
+        //    if (prime) {
+        //        console.log('素数' + i);
+        //    }
+        //}
+
+        //function findPrime(max) {
+        //    for (var i = 2; i < max; i++) {
+        //        var prime = true;
+        //        for (var j = 2; j < i; j++) {
+        //            if (i % j == 0) {
+        //                prime = false;
+        //                break;
+        //            }
+        //        }
+        //        if (prime) {
+        //            console.log( i);
+        //        }
+        //    }
+        //}
+        //findPrime(1000);
+
+
+
 
         //3. 自行设计参数，将之前“累加求和”的代码封装成一个函数Sum()，可以计算任意起始位置、任意步长（如：1,3,5……或者0,5,10,15……）的等差数列之和。
-
-        //4. 封装一个函数，建立一个函数getMaxNumber()，可以接受任意多各种类型的参数，并找出里面最大的数（忽略数值以外的其他类型）
-
-
-
-
-
-
-        //5. 封装一个函数swap(arr, i, j)，可以交换数组arr里下标 i 和 j 的值
-
-        function swap(arr, i, j) {
-            var short = 0;
-            arr[0] = i;
-            arr[1] = j;
-
-            short = i;
-            i = j;
-            j = short;
-
-            return i;
+        //  声明一个数组odds，利用循环把100以内的奇数按从小到达的顺序存入其中
+        var odds = [];
+        j = 0;
+        for (var i = 1; i <= 100; i += 2) {
+            odds[j] = i;
+            j++;
         }
-        console.log(swap([],1,9));
+        console.log(odds);
+        //计算从odds数组中所有元素的和
+
+        function sum(array, will) {
+            var sums = 0;
+            for (var i = 0; i < odds.length; i++) {
+                sum = sum + odds[i];
+            }
+
+        }
+        sum(odds, will);
 
 
-        //6. 利用上面的swap()函数，将“冒泡排序”封装成函数bubbleSort()
 
-        //7. 封装函数deleteDuplicated()删除一个数组里面重复的元素
-
-        //8. 不使用JavaScript内置函数
-        //8.1 将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
-        //8.2 统计出这段文字中有多少个单词：There are two ways to create a RegExp object : a literal notation and a constructor. To indicate strings , the parameters to the literal notation do not use quotation marks while the parameters to the constructor function do use quotation-marks. So the following expressions create the same regular expression
+                //4. 封装一个函数，建立一个函数getMaxNumber()，可以接受任意多各种类型的参数，并找出里面最大的数（忽略数值以外的其他类型）
 
 
+
+
+
+
+                //5. 封装一个函数swap(arr, i, j)，可以交换数组arr里下标 i 和 j 的值
+
+
+
+
+                //6. 利用上面的swap()函数，将“冒泡排序”封装成函数bubbleSort()
+
+                //7. 封装函数deleteDuplicated()删除一个数组里面重复的元素
+
+                //8. 不使用JavaScript内置函数
+                //8.1 将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
+                //8.2 统计出这段文字中有多少个单词：There are two ways to create a RegExp object : a literal notation and a constructor. To indicate strings , the parameters to the literal notation do not use quotation marks while the parameters to the constructor function do use quotation-marks. So the following expressions create the same regular expression
 
 
 
