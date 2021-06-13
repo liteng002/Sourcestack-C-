@@ -157,8 +157,8 @@ namespace Sourcestack
         //    return false;
         //}
 
-       
-       
+
+
         public static void Main(string[] args)
         {
             //调用这些类的有参/无参构造函数，生成这些类的对象，调用他们的方法
@@ -171,23 +171,22 @@ namespace Sourcestack
             Problem article = new Problem(10);
             article[0] = "C#";
             article[1] = "JavaScript";
-            article[2] = "计算机";
-            article[3] = "Web";
             article[9] = "Html";
 
             Console.WriteLine(article[9]);
-            Problem.Publish();
+            article.Publish();
+
+
+
+            //调用栈
+            MimicStack simulation = new MimicStack(10,30,20);
+           simulation.Element=20;
 
 
 
 
 
-
-
-
-
-
-
+            Console.WriteLine();
 
             //Console.WriteLine("请输入用户名和密码");
             //bool successful = LogOn(Console.ReadLine(), Console.ReadLine(), out string why);

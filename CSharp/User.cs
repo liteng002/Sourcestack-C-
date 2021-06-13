@@ -25,20 +25,20 @@ namespace CSharp
                 }
             }
         }
-        private User _Password;//user.Password在类的外部只能改不能读
-        public User Password { private get { return _Password; } set { _Password = value; } }
-        private string _LnvitedBy;
-        public string LnvitedBy
+        private string _Password;//user.Password在类的外部只能改不能读
+        public string Password { private get { return _Password; } set { _Password = value; } }
+        private string _InvitedBy;
+        public string InvitedBy
         {
-            get { return _LnvitedBy + _Name + _Password; }
-            set { _LnvitedBy = value + _Name + _Password; }
+            get { return _InvitedBy + _Name + _Password; }
+            set { _InvitedBy = value + _Name + _Password; }
         }
 
 
 
 
 
-
+        
 
         public User()
         {
