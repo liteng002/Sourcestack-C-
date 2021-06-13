@@ -1,11 +1,13 @@
 ﻿using System;
 using CSharp;
+
+
 namespace Sourcestack
 {
 
     public class Program
     {
-        
+
 
         //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
         //static double GetAverage(double[] scores)
@@ -155,11 +157,35 @@ namespace Sourcestack
         //    return false;
         //}
 
-      
-        
+       
+       
         public static void Main(string[] args)
         {
-            
+            //调用这些类的有参/无参构造函数，生成这些类的对象，调用他们的方法
+            User lt = new User();
+            lt.Name = "admin";
+            User.Register();
+            User.Login();
+
+
+            Problem article = new Problem(10);
+            article[0] = "C#";
+            article[1] = "JavaScript";
+            article[2] = "计算机";
+            article[3] = "Web";
+            article[9] = "Html";
+
+            Console.WriteLine(article[9]);
+            Problem.Publish();
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,7 +245,7 @@ namespace Sourcestack
 
 
             //完成“猜数字”游戏，方法名GuessMe()：
-           // GuessMe();
+            // GuessMe();
 
             //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
             //Console.WriteLine(GetAverage(new double[] { 12.346, 34.764, 86.536, 995, 68.23 }));
