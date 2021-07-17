@@ -4,94 +4,54 @@ using System.Text;
 
 namespace CSharp
 {
-    class Problem
-    {
-        //求助版块，定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）、发布时间（PublishDateTime）和作者（Author），和方法Publish()
 
-        private string _Totle;
-        public string Totle
-        {//设计一种方式，保证：每一个Problem对象一定有Body赋值   
-            get { return _Totle  ; }
-            set { _Totle = value + _Body;  } 
-        }
-        public string _Body { get; set; }
-        private int _Reward;
-        public int Reward//problem.Reward不能为负数
+    //求助版块，定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）和作者（Author）
+    //观察一起帮的求助（Problem）抽象出一个父类：内容（Content）
+    class Problem : Content
+    {
+        private string _Title;
+        private string _Body;
+
+        //每一个Problem对象一定有Body赋值
+        public Problem(string Body,int king) :base(king)
         {
-            get { return    _Reward; }
-            set
-            {
-                if (value > 0)
+            this._Body = Body;
+        }
+
+        //problem.Reward不能为负数
+        private int _Reward;
+        public int Reward 
+        {
+            get { return _Reward; }
+            set {
+                if (Reward >= 0)
                 {
-                    Console.WriteLine("悬赏不能为负数");
-                    _Reward = value;
-                }//else
+                    Reward = value;
+                }
+                else
+                {
+                    Console.WriteLine("您的悬赏不能为负数");
+                }
             }
         }
-        private DateTime _PublishDateTime;
-        public DateTime PublishDatetime{
-            get { return _PublishDateTime; }
-            set { _PublishDateTime = value ;}
-                
-        }
 
+                private User _Author;
 
-        
-        private string _Repository;//repository：可用于在底层实现上述方法和数据库的连接操作等
-        public string Repository
-        {
-            get { return  ""; }
-            set { }
-        }
-
-        private string _Author;
-        public string Authhor
-        { get { return _Body + _Author; }
-            set { _Author = value + _Body; }
-        }
-        private string[] _keyword;
+        //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
+        private string[] _Keyword = new string[10];
         public string this[int index]
         {
-            get { return _keyword[index]; }
-            set { _keyword[index] = value; }
+            get { return _Keyword[index - 1] ; }
+            set { _Keyword[index - 1] = value; }
         }
 
-
-
-
-
-
-
-
-        public Problem(int length)
+        //添加一个新类ContentService，其中有一个发布（Release()）方法：
+        //如果发布Problem，需要消耗Problem作者其设置悬赏数量的帮帮币
+        public override void Release()
         {
-            _keyword = new string[length];
+            //需要消耗Problem作者其设置悬赏数量的帮帮币  怎么体现
+            Console.WriteLine("saved into db")
         }
-
-
-
-
-
-
-
-
-
-        public  int Publish()//考虑求助（Problem）的以下方法/属性，哪些适合实例，哪些适合静态，然后添加到类中： 
-        {                    //Publish()：发布一篇求助，并将其保存到数据库
-            return -1; 
-        }
-
-        public int Load(int id)//Load(int Id)：根据Id从数据库获取一条求助
-        {
-            return -1;
-        }
-        public int Delete(int id)//Delete(int Id)：根据Id删除某个求助
-        {
-            return -1;
-        }
-
-       
-
 
 
     }

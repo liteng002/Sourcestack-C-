@@ -2,22 +2,41 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharp.wwwroot
+namespace CSharp
 {
-    class Repository//定义一个仓库（Repoistory）类，用于存取对象，其中包含：
-    {                //能实例就不要静态 
-        private const int _VERSION = 1;//一个int类型的常量version
-        private readonly string _Connection;//一个静态只读的字符串connection，以后可用于连接数据库
+    //能实例就不要静态
+    class Repository
+    {
 
 
-      //可以加两个方法 get，scve以后用于存取对象
-      public int Get()
-        {
+        //一个int类型的常量version
+        private const int _Version = 0;
+        //一个静态只读的字符串connection，以后可用于连接数据库
+        private static readonly string _Connection;
+
+        private int _Id;
+        //根据Id从数据库获取一条求助
+        public int Load(int id) {
             return -1;
         }
-        public int Scve()
-        {
+        //根据Id删除某个求助
+        public int Delete(int id) {
             return -1;
         }
+        //可用于在底层实现上述方法和数据库的连接操作等
+        public Repository ID(Repository repository ) {
+            return repository;
+        }
+
+
+        //发布一篇求助，并将其保存到数据库
+        public bool Publish(Problem problem ) 
+        {
+
+            return true;
+        } 
+
+
+
     }
 }

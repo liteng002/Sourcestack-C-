@@ -1,5 +1,5 @@
-﻿using System;
-using CSharp;
+﻿using CSharp;
+using System;
 
 
 namespace Sourcestack
@@ -9,178 +9,31 @@ namespace Sourcestack
     {
 
 
-        //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
-        //static double GetAverage(double[] scores)
-        //{
-        //    double sum = 0;
-        //    for (int i = 0; i < scores.Length; i++)
-        //    {
-        //        // Console.WriteLine(results[i]);
-        //        sum = sum + scores[i];
-
-        //    }
-        //    return Math.Round(sum/scores.Length, 2);
-        //}
-
-
-
-        //完成“猜数字”游戏，方法名GuessMe()：
-        //随机生成一个大于0小于1000的整数
-        //用户输入一个猜测值，系统进行判断，告知用户猜测的数是“大了”，还是“小了”
-        //没猜中可以继续猜，但最多不能超过10次
-        //如果5次之内猜中，输出：你真牛逼！
-        //如果8次之内猜中，输出：不错嘛！
-        //10次还没猜中，输出：(～￣(OO)￣)ブ
-        // 1-5 次  你真牛逼         6-8 次   不错嘛     9-10 次 猜中了哟     猜不中(～￣(OO)￣)ブ
-        //public static void GuessMe()
-        //{
-        //    Console.WriteLine("请输入0-1000以内的一个数字");
-        //    int random = new Random().Next(0, 1000);
-        //    for (int i = 1; i <= 10; i++)
-        //    {
-        //        int input = int.Parse(Console.ReadLine());
-
-        //        if (input == random)
-        //        {
-        //            if (i <= 5)
-        //            {
-        //                Console.WriteLine($"你真牛逼只用了{ i}次");
-        //            }
-        //            else if (i <= 8)
-        //            {
-        //                Console.WriteLine($"不错嘛只用了{ i}次");
-        //            }
-        //            else if (i <= 10)
-        //            {
-        //                Console.WriteLine($"猜中了哟只用了{ i}次");
-        //            }
-        //            return;
-        //        }
-        //        else if (input != random)
-        //        {
-        //            if (i == 10)
-        //            {
-        //                Console.WriteLine("(～￣(OO)￣)ブ");
-        //                return;
-        //            }
-        //            if (input > random)
-        //            {
-        //                Console.WriteLine($"太大了哟还剩{10 - i}次");
-        //            }
-        //            else //input < random
-        //            {
-        //                Console.WriteLine($"太小了呢还剩{10 - i}次");
-        //            }
-        //        }
-        //    }
-        //}
-        ///利用ref调用Swap()方法交换两个同学的床位号
-        //static int Swap(ref int upper, ref int lower)
-        //{
-
-        //    int middle = upper;
-        //    upper = lower;
-        //    lower = middle;
-        //    return upper;
-
-        //}
-
-
-
-
-
-
-        //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
-        //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
-        //  如果找到，返回该元素所在的下标；否则，返回 - 1
-        //static int BinarYseek(int[] numbers, int target)
-        //{
-        //    int left = 0, right = numbers.Length - 1;
-        //    while (left <= right)
-        //    {
-        //        int middle = (left + right) / 2;
-        //        if (target == numbers[middle])
-        //        {
-        //            return middle;
-        //        }
-        //        else if (target > numbers[middle])
-        //        {
-        //            left = middle + 1;
-        //        }
-        //        else if (target < numbers[middle])
-        //        {
-        //            right = middle - 1;
-        //        } // else  nothing          
-        //    }
-        //    return -1;
-        //}
-
-        //  
-        ///https://17bang.ren/Article/641
-        // 定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
-        //最小值min（默认为1）
-        //相邻两个元素之间的最大差值gap（默认为5） 
-        //元素个数length（默认为10个）
-        //static int[] GetArray(int min = 1, int lengh = 10, int gap = 5)
-        //{
-        //    int[] array = new int[lengh];
-        //    array[0] = min;
-        //    for (int i = 1; i < array.Length; i++)
-        //    {
-        //        array[i] = new Random().Next(gap) + array[i - 1];
-        //        Console.WriteLine(array[i]);
-        //    }
-        //    return array;
-        //}
-
-
-        //将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
-        //true / false，表示登陆是否成功
-        //string，表示登陆失败的原因
-        //static bool LogOn(string name, string password, out string why)
-        //{
-
-        //   why = "用户名不存在";
-        //    if (name != "叶子" && password != "yefei")
-        //    {
-        //        //why = "用户名不存在";
-        //    }
-        //    else if (name == "叶子" && password != "yefei")
-        //    {
-        //        why = "密码错误";
-        //    }
-        //    else if (name == "叶子" && password == "yefei")
-        //    {
-        //        why = "登录成功";
-        //        return true;
-        //    }//else nothing  
-        //    return false;
-        //}
-
-
-
         public static void Main(string[] args)
         {
+            //实例化上述类，得到他们的对象：
+            //给对象的字段赋值
+            //调用对象的方法
             //调用这些类的有参/无参构造函数，生成这些类的对象，调用他们的方法
-            User lt = new User();
-            lt.Name = "admin";
-            User.Register();
-            User.Login();
+            
+            User lt = new User("李腾", "432");
+            // lt.Name = "李腾";
+            Console.WriteLine(lt.Name);
+            lt.Register();
+
+            HelpMoney coin = new HelpMoney();
 
 
-            Problem article = new Problem(10);
-            article[0] = "C#";
-            article[1] = "JavaScript";
-            article[9] = "Html";
+            Problem query = new Problem("内容", 2);
+            //实例化文章和意见建议，调用他们：
+            //继承自父类的属性和方法
+            //自己的属性和方法
 
-            Console.WriteLine(article[9]);
-            article.Publish();
-
+            Article wz = new Article(3);
 
 
-            //调用栈
-            MimicStack simulation = new MimicStack(10,30,20);
-           simulation.Element=20;
+            Suggest yjjy = new Suggest(1);
+
 
 
 
@@ -530,5 +383,153 @@ namespace Sourcestack
             Console.ReadLine();
 
         }
+        //计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
+        //static double GetAverage(double[] scores)
+        //{
+        //    double sum = 0;
+        //    for (int i = 0; i < scores.Length; i++)
+        //    {
+        //        // Console.WriteLine(results[i]);
+        //        sum = sum + scores[i];
+
+        //    }
+        //    return Math.Round(sum/scores.Length, 2);
+        //}
+
+
+
+        //完成“猜数字”游戏，方法名GuessMe()：
+        //随机生成一个大于0小于1000的整数
+        //用户输入一个猜测值，系统进行判断，告知用户猜测的数是“大了”，还是“小了”
+        //没猜中可以继续猜，但最多不能超过10次
+        //如果5次之内猜中，输出：你真牛逼！
+        //如果8次之内猜中，输出：不错嘛！
+        //10次还没猜中，输出：(～￣(OO)￣)ブ
+        // 1-5 次  你真牛逼         6-8 次   不错嘛     9-10 次 猜中了哟     猜不中(～￣(OO)￣)ブ
+        //public static void GuessMe()
+        //{
+        //    Console.WriteLine("请输入0-1000以内的一个数字");
+        //    int random = new Random().Next(0, 1000);
+        //    for (int i = 1; i <= 10; i++)
+        //    {
+        //        int input = int.Parse(Console.ReadLine());
+
+        //        if (input == random)
+        //        {
+        //            if (i <= 5)
+        //            {
+        //                Console.WriteLine($"你真牛逼只用了{ i}次");
+        //            }
+        //            else if (i <= 8)
+        //            {
+        //                Console.WriteLine($"不错嘛只用了{ i}次");
+        //            }
+        //            else if (i <= 10)
+        //            {
+        //                Console.WriteLine($"猜中了哟只用了{ i}次");
+        //            }
+        //            return;
+        //        }
+        //        else if (input != random)
+        //        {
+        //            if (i == 10)
+        //            {
+        //                Console.WriteLine("(～￣(OO)￣)ブ");
+        //                return;
+        //            }
+        //            if (input > random)
+        //            {
+        //                Console.WriteLine($"太大了哟还剩{10 - i}次");
+        //            }
+        //            else //input < random
+        //            {
+        //                Console.WriteLine($"太小了呢还剩{10 - i}次");
+        //            }
+        //        }
+        //    }
+        //}
+        ///利用ref调用Swap()方法交换两个同学的床位号
+        //static int Swap(ref int upper, ref int lower)
+        //{
+
+        //    int middle = upper;
+        //    upper = lower;
+        //    lower = middle;
+        //    return upper;
+
+        //}
+
+
+
+
+
+
+        //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
+        //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
+        //  如果找到，返回该元素所在的下标；否则，返回 - 1
+        //static int BinarYseek(int[] numbers, int target)
+        //{
+        //    int left = 0, right = numbers.Length - 1;
+        //    while (left <= right)
+        //    {
+        //        int middle = (left + right) / 2;
+        //        if (target == numbers[middle])
+        //        {
+        //            return middle;
+        //        }
+        //        else if (target > numbers[middle])
+        //        {
+        //            left = middle + 1;
+        //        }
+        //        else if (target < numbers[middle])
+        //        {
+        //            right = middle - 1;
+        //        } // else  nothing          
+        //    }
+        //    return -1;
+        //}
+
+        //  
+        ///https://17bang.ren/Article/641
+        // 定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
+        //最小值min（默认为1）
+        //相邻两个元素之间的最大差值gap（默认为5） 
+        //元素个数length（默认为10个）
+        //static int[] GetArray(int min = 1, int lengh = 10, int gap = 5)
+        //{
+        //    int[] array = new int[lengh];
+        //    array[0] = min;
+        //    for (int i = 1; i < array.Length; i++)
+        //    {
+        //        array[i] = new Random().Next(gap) + array[i - 1];
+        //        Console.WriteLine(array[i]);
+        //    }
+        //    return array;
+        //}
+
+
+        //将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
+        //true / false，表示登陆是否成功
+        //string，表示登陆失败的原因
+        //static bool LogOn(string name, string password, out string why)
+        //{
+
+        //   why = "用户名不存在";
+        //    if (name != "叶子" && password != "yefei")
+        //    {
+        //        //why = "用户名不存在";
+        //    }
+        //    else if (name == "叶子" && password != "yefei")
+        //    {
+        //        why = "密码错误";
+        //    }
+        //    else if (name == "叶子" && password == "yefei")
+        //    {
+        //        why = "登录成功";
+        //        return true;
+        //    }//else nothing  
+        //    return false;
+        //}
+
     }
 }
