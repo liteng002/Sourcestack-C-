@@ -5,7 +5,7 @@ using System.Text;
 namespace CSharp
 {
     //观察一起帮的文章（Article）抽象出一个父类：内容（Content）
-    class Article : Content
+    class Article : Content , IClick
     {
         public Article(int king) : base(king)
         {
@@ -18,6 +18,16 @@ namespace CSharp
         {
             //需要Article作者消耗一个帮帮币  怎么体现？
                     Console.WriteLine("saved into db");
+        }
+
+        void IClick.Agree()
+        {
+           
+        }
+
+        void IClick.Disagree()
+        {
+            
         }
     }
 }

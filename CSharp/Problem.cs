@@ -7,7 +7,7 @@ namespace CSharp
 
     //求助版块，定义一个类Problem，包含字段：标题（Title）、正文（Body）、悬赏（Reward）和作者（Author）
     //观察一起帮的求助（Problem）抽象出一个父类：内容（Content）
-    class Problem : Content
+    class Problem : Content, IClick
     {
         private string _Title;
         private string _Body;
@@ -50,9 +50,17 @@ namespace CSharp
         public override void Release()
         {
             //需要消耗Problem作者其设置悬赏数量的帮帮币  怎么体现
-            Console.WriteLine("saved into db")
+            //Console.WriteLine("saved into db")
         }
 
+        void IClick.Agree()
+        {
+            
+        }
 
+        void IClick.Disagree()
+        {
+            
+        }
     }
 }

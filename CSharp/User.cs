@@ -14,7 +14,9 @@ namespace CSharp
     //定义一个User类
     //让User类无法被继承
     //再为之前所有类（含User、HelpMoney等）抽象一个基类：Entity，包含一个只读的Id属性。
-    sealed class User : Entity
+    //一起帮还可以在好友间发私信，所有又有了IChat接口，其中也有一个Send()方法声明。
+    //假设User类同时继承了ISendMessage和IChat，如何处理？
+    sealed class User : Entity , ISendMessage,  IChat
     {
         //如果user.Name为“admin”，输入时修改为“系统管理员”
         private string _Name;
@@ -49,6 +51,16 @@ namespace CSharp
         public string Login()
         {
             return "";
+        }
+
+        void ISendMessage.Send()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IChat.Send()
+        {
+            throw new NotImplementedException();
         }
 
         //每一个User对象一定有Name和Password赋值
