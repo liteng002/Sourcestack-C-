@@ -9,13 +9,42 @@ namespace Sourcestack
     {
 
 
+        //函数GetDate()，能计算一个日期若干（日/周/月）后的日期
+        public static DateTime GetDate(DateTime dateTime, int number)
+        {
+            if (number >= 1 && number < 7)
+            {
+                dateTime = dateTime.AddDays(number);
+            }
+            else if (number == 7)
+            {
+                dateTime = dateTime.AddDays(number);
+            }
+            else if (number > 7 && number <= 30)
+            {
+                dateTime = dateTime.AddMonths(1);
+            }
+            return dateTime;
+        }
+
+        //给定任意一个年份，就能按周排列显示每周的起始日期
+        public static void GetDateTime(DateTime dateTime)
+        {
+            for (int i = 1; i < 365 / 7; i++)
+            {
+                Console.WriteLine($"第{i}周：{dateTime.ToString("yyyy年MM月dd日")}-{dateTime.AddDays(7).ToString("yyyy年MM月dd日")}");
+                dateTime = dateTime.AddDays(7);
+            }
+
+        }
+
         public static void Main(string[] args)
         {
             //实例化上述类，得到他们的对象：
             //给对象的字段赋值
             //调用对象的方法
             //调用这些类的有参/无参构造函数，生成这些类的对象，调用他们的方法
-            
+
             User lt = new User("李腾", "432");
             // lt.Name = "李腾";
             Console.WriteLine(lt.Name);
@@ -35,7 +64,11 @@ namespace Sourcestack
             Suggest yjjy = new Suggest(1);
 
 
+            //int i = null; 
+            DateTime dateTime = new DateTime(2019, 3, 4);
+            Console.WriteLine(GetDate(dateTime, number: 8));
 
+            GetDateTime(new DateTime(2011, 1, 1));
 
 
 

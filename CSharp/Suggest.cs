@@ -18,7 +18,7 @@ namespace CSharp
         public override void Release()
         {
             //不需要消耗帮帮币  怎么体现
-            Console.WriteLine("saved into db")
+            Console.WriteLine("saved into db");
         }
 
 
