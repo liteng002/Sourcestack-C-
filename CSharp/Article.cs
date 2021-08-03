@@ -7,6 +7,7 @@ namespace CSharp
     //观察一起帮的文章（Article）抽象出一个父类：内容（Content）
     class Article : Content , IClick
     {
+      
         public Article(int king) : base(king)
         {
 

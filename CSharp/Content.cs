@@ -10,20 +10,30 @@ namespace CSharp
     abstract class Content : ContentService
     {
         //Content中有一个字段：kind，记录内容的种类（problem/article/suggest等），只能被子类使用
-         protected int _King;
+        protected int _King;
 
         //确保每个Content对象都有kind的非空值
-        protected  Content(int king)
+        protected Content(int king)
         {
             this._King = king;
         }
+        //在构造函数里面赋值
+        public Content(DateTime CreateTime)
+        {
+            this._CreateTime = CreateTime;
+            this.PublishTime = PublishTime;
+        }
 
         //Content中的createTime，不能被子类使用，但只读属性PublishTime使用它为外部提供内容的发布时间
+        //CreateTime 想一想他们应该在哪里赋值比较好，并完成相应代码
         private DateTime _CreateTime;
         public DateTime CreateTime
         {
             get { return _CreateTime; }
         }
+
+        //PublishTime 想一想他们应该在哪里赋值比较好，并完成相应代码
+        private DateTime PublishTime { get; }
 
 
 
