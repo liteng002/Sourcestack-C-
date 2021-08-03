@@ -11,6 +11,7 @@ namespace CSharp
     //出/入栈检查，
     //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
     //如果已弹出所有数据，提示“栈已空”
+    //使用object改造数据结构栈（MimicStack），并在出栈时获得出栈元素
     class MimicStack
     {
         private const int _Top = 0;

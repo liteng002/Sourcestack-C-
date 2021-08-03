@@ -70,6 +70,19 @@ namespace Sourcestack
 
             GetDateTime(new DateTime(2011, 1, 1));
 
+            //思考dynamic和var的区别，并用代码予以演示
+            dynamic dynamic;
+            //var v ;
+            //var 是 编译时赋值，dynamic 是 运行时赋值
+            //var 编译时不赋值会报错，dynamic不会且运行时也不会报错
+
+            //构造一个能装任何数据的数组，并完成数据的读写
+            object[] array = new object[5] { 32, 22.2, "李", true, new User("用户","uii321") };
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+
 
 
             Console.WriteLine();
