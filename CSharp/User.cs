@@ -20,6 +20,8 @@ namespace CSharp
     {
         //如果user.Name为“admin”，输入时修改为“系统管理员”
         private string _Name;
+        //User类中添加一个Tokens属性，类型为TokenManager
+        private TokenManager Tokens { get; set; }
         public string Name
         {
             get { return _Name; }
