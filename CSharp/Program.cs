@@ -77,15 +77,25 @@ namespace Sourcestack
             //var 编译时不赋值会报错，dynamic不会且运行时也不会报错
 
             //构造一个能装任何数据的数组，并完成数据的读写
-            object[] array = new object[5] { 32, 22.2, "李", true, new User("用户","uii321") };
+            object[] array = new object[5] { 32, 22.2, "李", true, new User("用户", "uii321") };
             for (int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine(array[i]);
             }
 
-
+            //给User添加权限
+            User yf = new User("叶飞", "1234");
+            yf.Tokens = new TokenManager();
+            yf.Tokens.Add(Token.Admin);
 
             Console.WriteLine();
+
+
+
+
+
+
+
 
             //Console.WriteLine("请输入用户名和密码");
             //bool successful = LogOn(Console.ReadLine(), Console.ReadLine(), out string why);

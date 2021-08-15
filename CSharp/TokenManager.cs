@@ -13,16 +13,24 @@ namespace CSharp
         //暴露Add(Token)、Remove(Token)和Has(Token)方法，可以添加、删除和判断其有无某个权限
         public void Add(Token token)
         {
-            
+            this._tokens = this._tokens | token;
         }
-        public void Remove(Token token) 
+        public void Remove(Token token)
         {
-        
+            if (Has(token))
+            {
+                this._tokens = this._tokens ^ token;
+            }
+            else
+            {
+                Console.WriteLine("没有此权限");
+            }
         }
+    
 
-        public void Has(Token token) 
+        public bool Has(Token token)
         {
-        
+            return token == (_tokens & token);
         }
     }
 }

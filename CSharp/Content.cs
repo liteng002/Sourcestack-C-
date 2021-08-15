@@ -33,7 +33,7 @@ namespace CSharp
         }
 
         //PublishTime 想一想他们应该在哪里赋值比较好，并完成相应代码
-        private DateTime PublishTime { get; }
+        public DateTime PublishTime { get; }
 
 
 
