@@ -9,24 +9,25 @@ namespace CSharp
     //观察一起帮的求助（Problem）抽象出一个父类：内容（Content）
     class Problem : Content, IClick
     {
-        private string _Title;
-        private string _Body;
+        private string title;
+        private string body;
 
         //每一个Problem对象一定有Body赋值
         public Problem(string Body,int king) :base(king)
         {
-            this._Body = Body;
+            this.body = Body;
         }
 
         //problem.Reward不能为负数
-        private int _Reward;
+        private int reward;
+
         public int Reward 
         {
-            get { return _Reward; }
+            get { return reward; }
             set {
-                if (Reward >= 0)
+                if (reward >= 0)
                 {
-                    Reward = value;
+                    reward = value;
                 }
                 else
                 {
@@ -35,14 +36,14 @@ namespace CSharp
             }
         }
 
-                private User _Author;
+                private User author;
 
         //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
-        private string[] _Keyword = new string[10];
+        private string[] keyword = new string[10];
         public string this[int index]
         {
-            get { return _Keyword[index - 1] ; }
-            set { _Keyword[index - 1] = value; }
+            get { return keyword[index - 1] ; }
+            set { keyword[index - 1] = value; }
         }
 
         //添加一个新类ContentService，其中有一个发布（Release()）方法：

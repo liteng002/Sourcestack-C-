@@ -10,11 +10,11 @@ namespace CSharp
 
 
         //一个int类型的常量version
-        private const int _Version = 0;
+        private const int version = 0;
         //一个静态只读的字符串connection，以后可用于连接数据库
-        private static readonly string _Connection;
+        private static readonly string connection;
 
-        private int _Id;
+        private int id;
         //根据Id从数据库获取一条求助
         public int Load(int id) {
             return -1;

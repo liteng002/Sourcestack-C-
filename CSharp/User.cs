@@ -19,30 +19,30 @@ namespace CSharp
     sealed class User : Entity , ISendMessage,  IChat
     {
         //如果user.Name为“admin”，输入时修改为“系统管理员”
-        private string _Name;
+        private string name;
         //User类中添加一个Tokens属性，类型为TokenManager
         public TokenManager Tokens { get; set; }
         public string Name
         {
-            get { return _Name; }
+            get { return name; }
             set {
                 if (value == "admin")
                 {
-                    _Name = "系统管理员";
+                    name = "系统管理员";
                 }//else nothing
-                _Name = value;
+                name = value;
             }
         }
 
         //user.Password在类的外部只能改不能读
-        private string _Password;
+        private string password;
         public string Password
         {
             
-            set { _Password = value; }
+            set { password = value; }
         }
 
-        private User _InvitedBY;
+        private User invitedBY;
 
         //能输出当前用户的注册信息，比如：fg开始注册，密码：1234，邀请人：dk
         public string Register()
