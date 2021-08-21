@@ -10,36 +10,35 @@ namespace Sourcestack
 
 
         //函数GetDate()，能计算一个日期若干（日/周/月）后的日期
-        public static DateTime GetDate(DateTime dateTime, int number)
-        {
-            if (number >= 1 && number < 7)
+        public static DateTime GetDate(DateTime dateTime, int count, GetDateTime unit) {
+            switch (unit)
             {
-                dateTime = dateTime.AddDays(number);
+                case CSharp.GetDateTime.Days:
+                    dateTime = dateTime.AddDays(count);
+                    break;
+                case CSharp.GetDateTime.Weeks:
+                    dateTime = dateTime.AddDays(count * 7);
+                    break;
+                case CSharp.GetDateTime.Months:
+                    dateTime = dateTime.AddMonths(count);
+                    break;
+                default:
+                    break;
             }
-            else if (number == 7)
-            {
-                dateTime = dateTime.AddDays(number);
-            }
-            else if (number > 7 && number <= 30)
-            {
-                dateTime = dateTime.AddMonths(1);
-            }
+
             return dateTime;
         }
 
         //给定任意一个年份，就能按周排列显示每周的起始日期
-        public static void GetDateTime(DateTime dateTime)
-        {
+        public static void GetDateTime(DateTime dateTime) {
             for (int i = 1; i < 365 / 7; i++)
             {
                 Console.WriteLine($"第{i}周：{dateTime.ToString("yyyy年MM月dd日")}-{dateTime.AddDays(7).ToString("yyyy年MM月dd日")}");
                 dateTime = dateTime.AddDays(7);
             }
-
         }
 
-        public static void Main(string[] args)
-        {
+        public static void Main(string[] args) {
             //实例化上述类，得到他们的对象：
             //给对象的字段赋值
             //调用对象的方法
@@ -66,7 +65,8 @@ namespace Sourcestack
 
             //int i = null; 
             DateTime dateTime = new DateTime(2019, 3, 4);
-            Console.WriteLine(GetDate(dateTime, number: 8));
+            GetDateTime unit = CSharp.GetDateTime.Weeks;
+            Console.WriteLine(GetDate(dateTime, count: 1, unit));
 
             GetDateTime(new DateTime(2011, 1, 1));
 
@@ -77,7 +77,7 @@ namespace Sourcestack
             //var 编译时不赋值会报错，dynamic不会且运行时也不会报错
 
             //构造一个能装任何数据的数组，并完成数据的读写
-            object[] array = new object[5] { 32, 22.2, "李", true, new User("用户", "uii321") };
+            object[] array = new object[] { 32, 22.2, "李", true, new User("用户", "uii321") };
             for (int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine(array[i]);
@@ -87,6 +87,8 @@ namespace Sourcestack
             User yf = new User("叶飞", "1234");
             yf.Tokens = new TokenManager();
             yf.Tokens.Add(Token.Admin);
+            yf.Tokens.Has(Token.Blogger);
+            yf.Tokens.Remove(Token.Newbie);
 
             Console.WriteLine();
 

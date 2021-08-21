@@ -13,5 +13,5 @@ namespace CSharp
         Newbie = 8,
         Registered = 16
     }
-
+   
 }

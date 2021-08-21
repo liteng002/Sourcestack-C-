@@ -8,10 +8,10 @@ namespace CSharp
     //改造Entity类，让其Id可以为任意类型
     class Entity
     {
-        protected int _Id;
+       //// protected int _Id; //作废
         public int Id 
         {
-            get { return _Id; }
+            get { return Id; }
 
         }
     }
