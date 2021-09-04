@@ -6,13 +6,13 @@ namespace CSharp
 {
     //再为之前所有类（含User、HelpMoney等）抽象一个基类：Entity，包含一个只读的Id属性。
     //改造Entity类，让其Id可以为任意类型
-    class Entity
+    class Entity<T>
     {
-       //// protected int _Id; //作废
-        public int Id 
+        public T Id
         {
-            get { return Id; }
-
+            get {
+                return Id;
+            }
         }
     }
 }

@@ -14,16 +14,20 @@ namespace CSharp
     //使用object改造数据结构栈（MimicStack），并在出栈时获得出栈元素
     class MimicStack
     {
-        private const int top = 0;
-        private const int bottom = 0;
-        private int[] array = new int[10];
+        const int Top = 0;
+        const int Bottom = 0;
+        object[] Array;
 
-        public void Pop() { 
-        
+        public MimicStack(int length) {
+            this.Array = new object[length];
         }
 
-        public void Push() { 
-        
+        public void Pop(object[] Array) {
+
+        }
+
+        public void Push( object function) {
+           
         }
 
 
