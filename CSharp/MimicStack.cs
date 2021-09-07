@@ -12,24 +12,37 @@ namespace CSharp
     //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
     //如果已弹出所有数据，提示“栈已空”
     //使用object改造数据结构栈（MimicStack），并在出栈时获得出栈元素
-    class MimicStack
+    class MimicStack<T>
     {
-        const int Top = 0;
-        const int Bottom = 0;
-        object[] Array;
-
         public MimicStack(int length) {
-            this.Array = new object[length];
+            array = new T[length];
         }
 
-        public void Pop(object[] Array) {
+        private T[] array;
+        private int top = 0;
 
+        public void Push(T value) {
+            if (top == array.Length)
+            {
+                Console.WriteLine("栈溢出");
+                return;
+            }
+            array[top] = value;
+            Console.WriteLine(array[top]);
+            top++;
         }
 
-        public void Push( object function) {
-           
-        }
+        public T Pop() {
 
+            if (top == 0)
+            {
+                Console.WriteLine("栈已空");
+
+            }
+            top--;
+            return array[top];
+        
+        }
 
     }
 }
