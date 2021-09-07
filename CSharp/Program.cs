@@ -151,7 +151,7 @@ namespace Sourcestack
             //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
             //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
             //  如果找到，返回该元素所在的下标；否则，返回 - 1
-             //Console.WriteLine(BinarYseek(new int[] { 13, 24, 35, 46, 57, 68 }, 4));
+            //Console.WriteLine(BinarYseek(new int[] { 13, 24, 35, 46, 57, 68 }, 4));
 
 
 
@@ -314,23 +314,7 @@ namespace Sourcestack
             //Console.WriteLine(sum);
 
 
-            //将源栈同学的成绩存入一个double数组中，用循环找到最高分和最低分
-            //double[] results = {- 555, 6, 2, 7, 9, 4, 8, -383};
-            //double max = results[0];
-            //double min = results[0];
-            //for (int i = 1; i < results.Length; i++)
-            //{
-            //    if (max < results[i])
-            //    {
-            //        max = results[i];
-            //    }  // else  nothing   
 
-            //    if (min > results[i])
-            //    {
-            //        min = results[i];
-            //    }// else nothing
-            //}
-            //Console.WriteLine(min);
 
             // 找到100以内的所有质数（只能被1和它自己整除的数） 
             //for (int i = 2; i <= 100; i++)
@@ -419,7 +403,23 @@ namespace Sourcestack
 
 
 
+            //将源栈同学的成绩存入一个double数组中，用循环找到最高分和最低分
+            //double[] results = {- 555, 6, 2, 7, 9, 4, 8, -383};
+            //double max = results[0];
+            //double min = results[0];
+            //for (int i = 1; i < results.Length; i++)
+            //{
+            //    if (max < results[i])
+            //    {
+            //        max = results[i];
+            //    }  // else  nothing   
 
+            //    if (min > results[i])
+            //    {
+            //        min = results[i];
+            //    }// else nothing
+            //}
+            //Console.WriteLine(min);
 
 
 

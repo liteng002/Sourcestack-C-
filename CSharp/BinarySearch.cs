@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSharp
 {
-    class BinarySearch <T> where T : IComparable
+    class BinarySearch<T> where T : IComparable
     {
         //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
         //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
@@ -14,7 +14,7 @@ namespace CSharp
             while (left <= right)
             {
                 int middle = (left + right) / 2;
-                if ( target.CompareTo(numbers[middle]) == 0) /*target == numbers[middle]*/
+                if (target.CompareTo(numbers[middle]) == 0) /*target == numbers[middle]*/
                 {
                     return middle;
                 }
@@ -29,6 +29,21 @@ namespace CSharp
             }
             return -1;
         }
+
+        public T GetMax(T[] array) {
+
+            T max = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (max.CompareTo(array[i]) < 0)
+                {
+                    max = array[i];
+                }
+            }
+            return max;
+
+        }
+
 
     }
 }
