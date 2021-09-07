@@ -151,7 +151,7 @@ namespace Sourcestack
             //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
             //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
             //  如果找到，返回该元素所在的下标；否则，返回 - 1
-            // Console.WriteLine(BinarYseek(new int[] { 13, 24, 35, 46, 57, 68 }, 4));
+             //Console.WriteLine(BinarYseek(new int[] { 13, 24, 35, 46, 57, 68 }, 4));
 
 
 
@@ -432,13 +432,6 @@ namespace Sourcestack
 
 
 
-            //元组作业
-            //https://17bang.ren/Article/638
-            //           1. 使用tuple作为参数，重构SelfIntroduction()方法，输出自我介绍
-            //2.实现方法：
-            //IndexOf()，通过遍历在无序数组中
-            //BinarySearch()，通过二分查找法在一个有序数组中
-            //找到某个值的下标，找不到返回 - 1
 
 
             //https://17bang.ren/Article/305
@@ -533,30 +526,7 @@ namespace Sourcestack
 
 
 
-        //实现二分查找，方法名BinarySeek(int[] numbers, int target)：
-        //传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
-        //  如果找到，返回该元素所在的下标；否则，返回 - 1
-        //static int BinarYseek(int[] numbers, int target)
-        //{
-        //    int left = 0, right = numbers.Length - 1;
-        //    while (left <= right)
-        //    {
-        //        int middle = (left + right) / 2;
-        //        if (target == numbers[middle])
-        //        {
-        //            return middle;
-        //        }
-        //        else if (target > numbers[middle])
-        //        {
-        //            left = middle + 1;
-        //        }
-        //        else if (target < numbers[middle])
-        //        {
-        //            right = middle - 1;
-        //        } // else  nothing          
-        //    }
-        //    return -1;
-        //}
+      
 
         //  
         ///https://17bang.ren/Article/641
