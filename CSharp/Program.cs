@@ -1,6 +1,6 @@
 ﻿using CSharp;
 using System;
-
+using System.Collections.Generic;
 
 namespace Sourcestack
 {
@@ -92,13 +92,36 @@ namespace Sourcestack
 
 
 
+            //一篇文章可以有多个评论
+            //Article article = new Article(1);
+            //Comment comment1 = new Comment() { Discuss = "你好", Article = article };
+            //Comment comment2 = new Comment() { Discuss = "我好", Article = article };
+            //Comment comment3 = new Comment() { Discuss = "大家好", Article = article };
+            //article.Comment = new List<Comment> { comment1, comment2, comment3 };
 
+            ////一个评论必须有一个它所评论的文章
+            //Comment comment = new Comment();
+            //Article article1 = new Article(1) { Contents = "这是文章内容" };
+            //comment.Article = article1;
 
+            ////每个文章和评论都有一个评价
+            //Comment comment4 = new Comment();
+            //Article article2 = new Article(1);
+            //Appraise appraise = new Appraise();
+            //comment4.Appraise = new Appraise();
+            //article2.Appraise = new Appraise();
 
+            ////一篇文章可以有多个关键字，一个关键字可以对应多篇文章
+            //Keyword keyword1 = new Keyword() { KeywordName = "SQL" };
+            //Keyword keyword2 = new Keyword() { KeywordName = "C#" };
+            //Keyword keyword3 = new Keyword() { KeywordName = "Html" };
+            //Keyword keyword4 = new Keyword() { KeywordName = "JavaScript" };
+            //Article article3 = new Article(1);
+            //Article article4 = new Article(2);
+            //Article article5 = new Article(1);
+            //article.keywords = new List<Keyword> { keyword1, keyword3, keyword4 };
+            //keyword1.Articles = new List<Article> { article3, article4, article5 };
 
-
-
-          
 
 
             Console.WriteLine();
@@ -526,7 +549,7 @@ namespace Sourcestack
 
 
 
-      
+
 
         //  
         ///https://17bang.ren/Article/641
