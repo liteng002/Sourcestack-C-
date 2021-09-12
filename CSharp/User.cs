@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
+
 //注册 / 登录功能，定义一个User类（以下所有类都按“一个类文件一个类”的原则组织），包含字段：Name（用户名）、Password（密码）和 邀请人（InvitedBy），和方法：
 //Register()：能输出当前用户的注册信息，比如：fg开始注册，密码：1234，邀请人：dk
 //Login()：能输出当前用户的登录信息，比如：fg开始登录，输入密码：1234
@@ -16,7 +17,7 @@ namespace CSharp
     //再为之前所有类（含User、HelpMoney等）抽象一个基类：Entity，包含一个只读的Id属性。
     //一起帮还可以在好友间发私信，所有又有了IChat接口，其中也有一个Send()方法声明。
     //假设User类同时继承了ISendMessage和IChat，如何处理？
-    sealed class User : Entity , ISendMessage,  IChat
+    sealed class User : Entity<int> , ISendMessage,  IChat
     {
         //如果user.Name为“admin”，输入时修改为“系统管理员”
         private string name;
@@ -40,6 +41,14 @@ namespace CSharp
         {
             
             set { password = value; }
+        }
+
+  
+
+        public int HelpMoney
+        {
+            get;
+             set;
         }
 
         private User invitedBY;

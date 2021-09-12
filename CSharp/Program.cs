@@ -1,10 +1,12 @@
 ﻿using CSharp;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
+
 
 namespace Sourcestack
 {
-   
+
     public class Program
     {
 
@@ -38,7 +40,19 @@ namespace Sourcestack
             }
         }
 
-     
+        //在Content之外封装一个方法，可以修改Content的CreateTime和PublishTime
+        //public static void SetCreateTime(Content content, DateTime dateTime) {
+        //    typeof(Content).GetProperty(
+        //        "CreateTime", BindingFlags.Public | BindingFlags.Instance)
+        //        .SetValue(content, dateTime);
+        //}
+
+        //public static void SetPublishTime(Content content, DateTime dateTime) {
+
+        //    typeof(Content).GetProperty(
+        //            "CreateTime", BindingFlags.Public | BindingFlags.Instance)
+        //            .SetValue(content, dateTime);
+        //}
 
         public static void Main(string[] args) {
             //实例化上述类，得到他们的对象：
@@ -54,7 +68,7 @@ namespace Sourcestack
             HelpMoney coin = new HelpMoney();
 
 
-            Problem query = new Problem("内容", 2);
+            Problem query = new Problem("内容", "2");
             //实例化文章和意见建议，调用他们：
             //继承自父类的属性和方法
             //自己的属性和方法
@@ -84,6 +98,16 @@ namespace Sourcestack
             {
                 Console.WriteLine(array[i]);
             }
+
+            //用反射获取Publish()上的特性实例，输出其中包含的信息
+            Attribute attribute = HelpMoneyChangedAttribute.GetCustomAttribute(
+                typeof(Problem).GetMethod("Publish"),
+                typeof(HelpMoneyChangedAttribute));
+            Console.WriteLine((HelpMoneyChangedAttribute)attribute);
+
+            
+
+
 
             //给User添加权限
             User yf = new User("叶飞", "1234");
@@ -127,7 +151,15 @@ namespace Sourcestack
 
 
 
+            //在之前“文章/评价/评论/用户/关键字”对象模型的基础上，添加相应的数据，然后完成以下操作：
+            User fg = new User("飞哥", "1234");
+            User xy = new User("小鱼", "1234");
+            IEnumerable<User> users = new List<User> { fg, xy };
 
+            Problem problem1 = new Problem(Body: "正文", king: "article") { Author = fg };
+
+
+            Console.WriteLine(fg.Name);
 
 
 

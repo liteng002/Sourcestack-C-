@@ -13,17 +13,18 @@ namespace CSharp
         private string body;
 
         //每一个Problem对象一定有Body赋值
-        public Problem(string Body,int king) :base(king)
-        {
+        public Problem(string Body, string king) : base(king) {
             this.body = Body;
         }
 
         //problem.Reward不能为负数
         private int reward;
 
-        public int Reward 
+        public int Reward
         {
-            get { return reward; }
+            get {
+                return reward;
+            }
             set {
                 if (reward >= 0)
                 {
@@ -36,32 +37,43 @@ namespace CSharp
             }
         }
 
-                private User author;
+        public User Author
+        {
+            get; set;
+        }
 
         //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
         private string[] keyword = new string[10];
         public string this[int index]
         {
-            get { return keyword[index - 1] ; }
-            set { keyword[index - 1] = value; }
+            get {
+                return keyword[index - 1];
+            }
+            set {
+                keyword[index - 1] = value;
+            }
         }
 
         //添加一个新类ContentService，其中有一个发布（Release()）方法：
         //如果发布Problem，需要消耗Problem作者其设置悬赏数量的帮帮币
-        public override void Release()
-        {
+        public override void Release() {
             //需要消耗Problem作者其设置悬赏数量的帮帮币  怎么体现
             //Console.WriteLine("saved into db")
         }
 
-        void IClick.Agree()
-        {
-            
+        //将HelpMoneyChanged应用于Publish()方法
+        [HelpMoneyChanged(10/*, Message = "发布"*/)]
+        public void Publish() {
+            Author.HelpMoney--;
         }
 
-        void IClick.Disagree()
-        {
-            
+
+        void IClick.Agree() {
+
+        }
+
+        void IClick.Disagree() {
+
         }
     }
 }
