@@ -27,6 +27,21 @@ namespace CSharp
 
         //一篇文章可以有多个关键字，一个关键字可以对应多篇文章
            public List<Keyword> keywords { get;set;    }
+        public List<Comment> Comments
+        {
+            get;
+            internal set;
+        }
+        public string Title
+        {
+            get;
+            internal set;
+        }
+        public object Name
+        {
+            get;
+            internal set;
+        }
 
         void IClick.Agree() {
 
@@ -36,7 +51,8 @@ namespace CSharp
 
         }
 
-
-
+        public static implicit operator Article(Article v) {
+            throw new NotImplementedException();
+        }
     }
 }

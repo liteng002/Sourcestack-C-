@@ -6,6 +6,8 @@ namespace CSharp
 {
     class Comment : IClick
     {
+       
+
 
 
         //评论内容
@@ -13,6 +15,8 @@ namespace CSharp
 
         //一个评论必须有一个它所评论的文章
         public Article Article  { get;set;  }
+
+      
 
         //每个文章和评论都有一个评价
         public Appraise Appraise { get;set;  }

@@ -30,11 +30,11 @@ namespace CSharp
             get {
                 return createTime;
             }
-            private set {
+             set {
             }
         }
 
-        private User Author
+        public User Author
         {
             get;set;
         }
@@ -42,7 +42,7 @@ namespace CSharp
         //PublishTime 想一想他们应该在哪里赋值比较好，并完成相应代码
         public DateTime PublishTime
         {
-            get; private set;
+            get; set;
         }
 
 

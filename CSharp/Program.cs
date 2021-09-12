@@ -1,8 +1,10 @@
 ﻿using CSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
+
 
 namespace Sourcestack
 {
@@ -55,31 +57,31 @@ namespace Sourcestack
         //}
 
         //实现GetCount(string container, string target)方法，可以统计出container中有多少个target
-        public static int GetCount(string container, string target) {
-            int result = 0;
-            while (container.Contains(target))
-            {
-                container = container.Substring(container.IndexOf(target + target.Length));
-            }
-            return result;
-        }
+        //public static int GetCount(string container, string target) {
+        //    int result = 0;
+        //    while (container.Contains(target))
+        //    {
+        //        container = container.Substring(container.IndexOf(target + target.Length));
+        //    }
+        //    return result;
+        //}
 
         //不使用string自带的Join()方法，定义一个mimicJoin()方法，能将若干字符串用指定的分隔符连接起来，
         //比如：mimicJoin("-","a","b","c","d")，其运行结果为：a-b-c-d
 
-        public static string MimicJoin(string interval, string[] value) {
+        //public static string MimicJoin(string interval, string[] value) {
 
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < value.Length; i++)
-            {
-                sb = sb.Append(value[i]);
-                if (i < value.Length - 1)
-                {
-                    sb.Append(interval);
-                }
-            }
-            return sb.ToString();
-        }
+        //    StringBuilder sb = new StringBuilder();
+        //    for (int i = 0; i < value.Length; i++)
+        //    {
+        //        sb = sb.Append(value[i]);
+        //        if (i < value.Length - 1)
+        //        {
+        //            sb.Append(interval);
+        //        }
+        //    }
+        //    return sb.ToString();
+        //}
 
 
         public static void Main(string[] args) {
@@ -184,16 +186,156 @@ namespace Sourcestack
             User xy = new User("小鱼", "1234");
             IEnumerable<User> users = new List<User> { fg, xy };
 
-            Problem problem1 = new Problem(Body: "正文", king: "article") { Author = fg };
+            Problem problem1 = new Problem(Body: "正文1", king: "article1") { Author = fg, Reward = 5, Title = "问题1" };
+            Problem problem2 = new Problem(Body: "正文2", king: "article2") { Author = fg, Reward = 10, Title = "问题2" };
+            Problem problem3 = new Problem(Body: "正文3", king: "article3") { Author = xy, Reward = 15, Title = "问题3" };
+            Problem problem4 = new Problem(Body: "正文4", king: "article4") { Author = xy, Reward = 20, Title = "问题4" };
+            IEnumerable<Problem> problems = new List<Problem> { problem1, problem2, problem3, problem4 };
+
+            Keyword csharp = new Keyword { KeywordName = "C#" };
+            Keyword java = new Keyword { KeywordName = "java" };
+            Keyword html = new Keyword { KeywordName = "html" };
+            Keyword sql = new Keyword { KeywordName = "sql" };
+            Keyword mvc = new Keyword { KeywordName = "mvc" };
+
+            Comment comment1 = new Comment { Discuss = "评论1" };
+            Comment comment2 = new Comment { Discuss = "评论2" };
+            Comment comment3 = new Comment { Discuss = "评论3" };
+            Comment comment4 = new Comment { Discuss = "评论4" };
+            Comment comment5 = new Comment { Discuss = "评论5" };
 
 
-            Console.WriteLine(fg.Name);
+            Article article1 = new Article(5) {
+                Comments = new List<Comment> { comment1, comment2 },
+                keywords = new List<Keyword> { csharp, java },
+                PublishTime = new DateTime(2021, 9, 11),
+                Title = "标题1",
+                Author = fg
+            };
+            Article article2 = new Article(5) {
+                Comments = new List<Comment> { comment2 },
+                keywords = new List<Keyword> { csharp, java },
+                PublishTime = new DateTime(2021, 9, 21),
+                Title = "标题1",
+                Author = fg
+            }; Article article3 = new Article(5) {
+                Comments = new List<Comment> { comment3, comment2 },
+                keywords = new List<Keyword> { csharp, html },
+                PublishTime = new DateTime(2021, 8, 15),
+                Title = "标题2",
+                Author = fg
+            }; Article article4 = new Article(5) {
+                Comments = new List<Comment> { comment1, comment2, comment4 },
+                keywords = new List<Keyword> { csharp, java, sql },
+                PublishTime = new DateTime(2021, 4, 13),
+                Title = "标题3",
+                Author = xy
+            }; Article article5 = new Article(5) {
+                Comments = new List<Comment> { comment1, comment5, },
+                keywords = new List<Keyword> { csharp, mvc, },
+                PublishTime = new DateTime(2021, 10, 11),
+                Title = "标题4",
+                Author = xy
+            };
+
+            IEnumerable<Article> articles = new List<Article> { article5, article4, article3, article2, article1 };
+
+            //找出“飞哥”发布的文章
+            //var result = articles.Where(a => a.Author == fg);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Contents);
+            //}
+
+            //找出2019年4月21日以后“小鱼”发布的文章
+            //var resule = articles.Where(a => a.Author == xy);
+            //resule = resule.Where(a => a.PublishTime > new DateTime(2019, 4, 21));
+            //foreach (var item in resule)
+            //{
+            //    Console.WriteLine(item.Contents);
+            //}
+
+            //按发布时间升序/降序排列显示文章
+            //var result = articles.OrderByDescending(a => a.PublishTime);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"{item.PublishTime } : { item.Contents}");
+            //}
+
+            //var result = from s in articles
+            //             orderby s.PublishTime descending
+            //             select s;
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"{item.PublishTime}{item.Title}{item.Contents}");
+            //}
+
+            //统计每个用户各发布了多少篇文章
+
+            //var result = articles.GroupBy(a => a.Author);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"{item.Key.Name}发布了{item.Count()}文章 ");
+            //}
+
+            //var statistics = from a in articles
+            //                 group a by a.Name into au
+            //                 select new {
+            //                     key = au.Key,
+            //                     count = au.Count()
+            //                 };
+
+            //var fuse = statistics.ToList();
+            //foreach (var item in fuse)
+            //{
+            //    Console.WriteLine($"{item.key}有{item.count}篇文章");
+            //}
+
+            //找出包含关键字“C#”或“.NET”的文章
+            //var resule = articles.Where(s => s.keywords.Any(k => k.KeywordName == "C#"
+            //|| k.KeywordName == ".NET"));
+            //var resule1 = from s in articles
+            //              where s.keywords.Any(k => k.KeywordName == "C#" || k.KeywordName =="NET")
+            //              select s;
+            //var resule2 = from s in articles
+            //              where s.keywords.Contains(csharp) || s.keywords.Contains(java)
+            //              select s;
+            //foreach (var item in resule2)
+            //{
+            //    Console.WriteLine(item.Contents);
+            //}
 
 
+            //找出评论数量最多的文章
+            //var resule = articles.OrderByDescending(a => a.Comments.Count());
+            //var resule1 = resule.LastOrDefault();
+            //Console.WriteLine("评论最多的文章是"+ resule1.Contents);
 
+            //var most = from s in articles
+            //           orderby s.Comments.Count descending
+            //           select s;
+            //var resule3 = most.ToList();
+            //Console.WriteLine(resule3[0].Contents);
 
+            //找出每个作者评论数最多的文章
+            //var author = from s in articles
+            //             group s by s.Author into ga
+            //             select ga.OrderByDescending(ga =>
+            //             ga.Comments?.Count()).FirstOrDefault();
+            //foreach (var item in author)
+            //{
+            //    Console.WriteLine($"{item.Author.Name}评论最多的文章{item.Comments}");
+            //}
 
+            //找出每个作者最近发布的一篇文章
+            //var result = articles.GroupBy(a => a.Author).Select(ga => ga.OrderByDescending(
+            //    a => a.PublishTime).FirstOrDefault());
 
+            //为求助（Problem）添加悬赏（Reward）属性，并找出每一篇求助的悬赏都大于5个帮帮币的求助作者
+
+            //var author = problems.GroupBy(p => p.Author).Where(
+            //    a => a.Min(x => x.Reward) > 5).Select(g => g.Key);
 
             Console.WriteLine();
 
