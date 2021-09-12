@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-
+using System.Text;
 
 namespace Sourcestack
 {
@@ -53,6 +53,34 @@ namespace Sourcestack
         //            "CreateTime", BindingFlags.Public | BindingFlags.Instance)
         //            .SetValue(content, dateTime);
         //}
+
+        //实现GetCount(string container, string target)方法，可以统计出container中有多少个target
+        public static int GetCount(string container, string target) {
+            int result = 0;
+            while (container.Contains(target))
+            {
+                container = container.Substring(container.IndexOf(target + target.Length));
+            }
+            return result;
+        }
+
+        //不使用string自带的Join()方法，定义一个mimicJoin()方法，能将若干字符串用指定的分隔符连接起来，
+        //比如：mimicJoin("-","a","b","c","d")，其运行结果为：a-b-c-d
+
+        public static string MimicJoin(string interval, string[] value) {
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < value.Length; i++)
+            {
+                sb = sb.Append(value[i]);
+                if (i < value.Length - 1)
+                {
+                    sb.Append(interval);
+                }
+            }
+            return sb.ToString();
+        }
+
 
         public static void Main(string[] args) {
             //实例化上述类，得到他们的对象：
@@ -105,7 +133,7 @@ namespace Sourcestack
                 typeof(HelpMoneyChangedAttribute));
             Console.WriteLine((HelpMoneyChangedAttribute)attribute);
 
-            
+
 
 
 

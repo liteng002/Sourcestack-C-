@@ -23,17 +23,37 @@ namespace CSharp
         private string name;
         //User类中添加一个Tokens属性，类型为TokenManager
         public TokenManager Tokens { get; set; }
+        //public string Name
+        //{
+        //    get { return name; }
+        //    set {
+        //        if (value == "admin")
+        //        {
+        //            name = "系统管理员";
+        //        }//else nothing
+        //        name = value;
+        //    }
+        //}
+
+        //设计一个适用的机制，能确保用户（User）的昵称（Name）不能含有admin、17bang、管理员等敏感词。
         public string Name
         {
-            get { return name; }
+            get {
+                return name;
+            }
             set {
-                if (value == "admin")
+                if (value.Contains("admin") || value.Contains("17bang") ||value.Contains("管理员"))
                 {
-                    name = "系统管理员";
-                }//else nothing
-                name = value;
+                    Console.WriteLine("输入词语敏感");
+                    return;
+                }
+                else
+                {
+                    name = value;
+                }
             }
         }
+
 
         //user.Password在类的外部只能改不能读
         private string password;
