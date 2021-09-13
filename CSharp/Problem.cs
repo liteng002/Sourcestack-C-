@@ -19,6 +19,7 @@ namespace CSharp
 
         //problem.Reward不能为负数
         private int reward;
+        //修改之前的属性验证：problem.Reward为负数时直接抛出“参数越界”异常
 
         public int Reward
         {
@@ -26,9 +27,10 @@ namespace CSharp
                 return reward;
             }
             set {
-                if (reward >= 0)
+                if (reward < 0)
                 {
-                    reward = value;
+                    //reward = value;
+                    throw new ArrayTypeMismatchException($"参数越界{value}");
                 }
                 else
                 {

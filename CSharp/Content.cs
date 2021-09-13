@@ -30,13 +30,13 @@ namespace CSharp
             get {
                 return createTime;
             }
-             set {
+            set {
             }
         }
 
         public User Author
         {
-            get;set;
+            get; set;
         }
 
         //PublishTime 想一想他们应该在哪里赋值比较好，并完成相应代码
@@ -45,7 +45,14 @@ namespace CSharp
             get; set;
         }
 
-
+        //内容（Content）发布（Publish）的时候检查其作者（Author）是否为空，如果为空抛出“参数为空”异常
+        public  void Publish() {
+            if (Author == null)
+            {
+                throw new ArgumentNullException("参数为空");
+            }
+            Console.WriteLine();
+        }
 
 
 
