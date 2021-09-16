@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceStacks", "SourceStack
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp", "CSharp\CSharp.csproj", "{E0BD828D-3B8D-4B33-8616-40188A8B149E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capthcha", "Capthcha\Capthcha.csproj", "{6C2DCCBC-7459-4D8A-8D8E-38951943ABBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E0BD828D-3B8D-4B33-8616-40188A8B149E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0BD828D-3B8D-4B33-8616-40188A8B149E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0BD828D-3B8D-4B33-8616-40188A8B149E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2DCCBC-7459-4D8A-8D8E-38951943ABBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2DCCBC-7459-4D8A-8D8E-38951943ABBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2DCCBC-7459-4D8A-8D8E-38951943ABBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2DCCBC-7459-4D8A-8D8E-38951943ABBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
