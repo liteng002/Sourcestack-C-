@@ -339,18 +339,18 @@ namespace Sourcestack
 
 
             //在Main()函数调用ContentService时，捕获一切异常，并记录异常的消息和堆栈信息
-            try
-            {
-                ContentService contentService = new ContentService();
-                contentService.Release(contentService);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString()+ DateTime.Now.ToString("yyyy年mm月dd日 hh点mm分ss秒"));
-                //throw;
-            }
+            //try
+            //{
+            //    ContentService contentService = new ContentService();
+            //    contentService.Release(contentService);
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.ToString()+ DateTime.Now.ToString("yyyy年mm月dd日 hh点mm分ss秒"));
+            //    //throw;
+            //}
 
-
+         
 
 
             Console.WriteLine();
