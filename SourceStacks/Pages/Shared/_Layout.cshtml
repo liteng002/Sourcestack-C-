@@ -6,9 +6,14 @@
     <title>@ViewData["Title"] - SourceStacks</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="shortcut icon " type="image/ico" href="Lmage/log.ico" media="screen" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/StyleSheet.css" />
 </head>
 <body>
-    <header>
+    @*<header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">SourceStacks</a>
@@ -28,7 +33,8 @@
                 </div>
             </div>
         </nav>
-    </header>
+        
+    </header>*@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -36,9 +42,23 @@
     </div>
 
     <footer class="border-top footer text-muted">
+
         <div class="container">
             &copy; 2021 - SourceStacks - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
+        <p style="float:left;width:70%">
+
+            <span style="color:blue">关于我们</span><span>&nbsp;|</span>
+            <span style="color:blue">源站课堂</span><span>&nbsp;|</span>
+            <span style="color:blue">常见问题</span><span>&nbsp;|</span>
+            <span style="color:blue">意见建议</span><span>&nbsp;|</span>
+            <span style="color:blue">历史通知</span><span>&nbsp;|</span>
+            <span style="color:blue">诚邀合伙人</span>
+        </p>
+        <p style="float:right">
+            <a href="http://www.miitbeian.gov.cn">渝ICP备18007191号（备案）</a>
+            <span>© 2021- 自由</span><img src="Lmage/freeflying.ico" />
+        </p>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
