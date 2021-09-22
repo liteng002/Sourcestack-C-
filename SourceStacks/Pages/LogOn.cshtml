@@ -15,14 +15,14 @@
 <main>
     <form method="post" action="Logon.html">
         <label>用户名：（*必填）</label><br />
-        <input type="text" name="username" placeholder="不是昵称，是登录用户名" /><br />
+        <input asp-for="NewUser.Name" placeholder="不是昵称，是登录用户名" /><br />
         <label>密码：（*必填）</label><br />
-        <input type="password" name="userpassword" placeholder="不少与4个字符" /><br />
+        <input asp-for="NewUser.Password" placeholder="不少与4个字符" /><br />
         <label>验证码：（*必填）</label><br />
-        <input type="text" />&nbsp;&nbsp;&nbsp;<span>看不清楚</span>
+        <input asp-for="NewUser.Captcha" />&nbsp;&nbsp;&nbsp;<span>看不清楚</span>
         <br />
         <button type="submit">提交</button>
-        <label><input type="checkbox" name="Userremember" value="male" />记住我</label>
+        <label><input asp-for="Rememberme" value="male" />记住我</label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span>忘了</span>
         <span>注册</span>

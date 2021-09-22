@@ -14,10 +14,10 @@
             <input type="file" accept="jpg/png/gif" /><br />
             <label>性别：</label>
             <label>
-                <input type="radio" name="gender" value="male" checked />男
+                <input asp-for="NewUser.IsMale" value="true" checked />男
             </label>
             <label>
-                <input type="radio" name="gender" value="female" />女
+                <input asp-for="NewUser.IsMale" value="false" />女
             </label><br />
             <label>生日：</label><br />
             <select>

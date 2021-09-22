@@ -11,13 +11,13 @@
     <section>
         <form action="Contact.html" method="post">
             <label>QQ:</label><br />
-            <input type="text" name="UserQq" placeholder="建议填写" /><br />
+            <input asp-for="NewUser.QQ" placeholder="建议填写" /><br />
             <label>微信：</label><br />
-            <input type="text" name="UserWechat" placeholder="建议填写" /><br />
+            <input asp-for="NewUser.Wechat" placeholder="建议填写" /><br />
             <label>电话：</label><br />
-            <input type="tel" name="Usertel" placeholder="请谨慎考虑是否填写" /><br />
+            <input asp-for="NewUser.phone" placeholder="请谨慎考虑是否填写" /><br />
             <label>其他：</label><br />
-            <textarea name="selfDescription" cols="30" rows="8" placeholder="需要说明的情况，比如加QQ时验证问题的回答，否则比如加不了，这就尴尬了。以及你能够接受的其他联系方式"></textarea>
+            <textarea asp-for="NewUser.postscript" cols="30" rows="8" placeholder="需要说明的情况，比如加QQ时验证问题的回答，否则比如加不了，这就尴尬了。以及你能够接受的其他联系方式"></textarea>
             <br />
             <button type="submit"><!--<a href="" target="_self"></a>-->修改   </button>  &nbsp; &nbsp; &nbsp; <span> 成功激活后自动返回<!--<a href="">-->之前页面<!--</a>--></span>
         </form>
