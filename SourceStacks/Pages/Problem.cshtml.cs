@@ -1,36 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MyWebApp.Pages.Filter;
 using E = MyWebApp.Pages.Article;
 
 
-
-namespace MyWebApp.Pages.Entitiy
+namespace MyWebApp.Pages._17bang
 {
-    [NeedLogOn]
-    public class IndexModel : PageModel
+    public class ProblemModel : PageModel
     {
         public Repositories.Repositories repositories;
-        public IList<E.Content> Articles { get; set; }
+        public IList<E.Content> Contents { get; set; }
         public int Count { get; set; }
         public int PageSize = 2;
         public int PageIndex { get; set; }
-        public IndexModel()
+        public ProblemModel()
         {
             repositories = new Repositories.Repositories();
         }
         public void OnGet()
         {
+            PageIndex = Convert.ToInt32(Request.Query["pageIndex"][0]);
             Count = repositories.GetCount();
-            Articles = repositories.Get(PageIndex, PageSize);
-
+            Contents = repositories.Get(PageIndex, PageSize);
         }
     }
 }
