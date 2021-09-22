@@ -9,32 +9,32 @@ using MyWebApp.Pages.Entity;
 
 namespace MyWebApp.Pages.Filter
 {
-	public class NeedLogOnAttribute : Attribute, IPageFilter
-	{
-	
+    public class NeedLogOnAttribute : Attribute, IPageFilter
+    {
 
-		public void OnPageHandlerExecuted(PageHandlerExecutedContext context)
-		{
 
-		}
+        public void OnPageHandlerExecuted(PageHandlerExecutedContext context)
+        {
 
-		public void OnPageHandlerExecuting(PageHandlerExecutingContext context)
-		{
-			if (context.HttpContext.Request.Method.ToUpper() == "GET")
-			{
-			
-				if (context.HttpContext.Session.Keys == null)
-				{
-					((PageModel)context.HandlerInstance).TempData[Keys.ErrorMessage]
-						= $"访问{context.HttpContext.Request.Path}页面需要先登录";
-					context.Result = new RedirectToPageResult("/Log/On");
-				}//else nothing
-			}//else nothing
+        }
 
-		}
+        public void OnPageHandlerExecuting(PageHandlerExecutingContext context)
+        {
+            if (context.HttpContext.Request.Method.ToUpper() == "GET")
+            {
 
-		public void OnPageHandlerSelected(PageHandlerSelectedContext context)
-		{
-		}
-	}
+                if (context.HttpContext.Session.Keys == null)
+                {
+                    ((PageModel)context.HandlerInstance).TempData[Keys.ErrorMessage]
+                        = $"访问{context.HttpContext.Request.Path}页面需要先登录";
+                    context.Result = new RedirectToPageResult("/Log/On");
+                }//else nothing
+            }//else nothing
+
+        }
+
+        public void OnPageHandlerSelected(PageHandlerSelectedContext context)
+        {
+        }
+    }
 }
