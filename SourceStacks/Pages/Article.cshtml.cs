@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MyWebApp.Pages._17bang
+namespace SourceStacks.Pages
 {
     public class ArticleModel : PageModel
     {

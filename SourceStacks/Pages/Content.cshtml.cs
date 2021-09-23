@@ -11,7 +11,7 @@ using Microsoft.Azure.Documents;
 
 
 
-namespace MyWebApp.Pages.Article
+namespace SourceStacks.Pages
 {
     public class Content : Entity
     {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 
-namespace MyWebApp.Pages.TagHelpers
+namespace SourceStacks.Pages
 {
     [HtmlTargetElement("datetime", Attributes = "asp-showicons,asp-only")]
     public class PageTagHelperModel : TagHelper

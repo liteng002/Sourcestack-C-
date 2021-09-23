@@ -5,20 +5,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using MyWebApp.Pages.Filter;
-using E = MyWebApp.Pages.Article;
 
 
-
-namespace MyWebApp.Pages.Entitiy
+namespace SourceStacks.Pages
 {
     [NeedLogOn]
     public class IndexModel : PageModel
     {
         public Repositories.Repositories repositories;
-        public IList<E.Content> Articles { get; set; }
+        public IList<SourceStacks.PagesContent> Articles { get; set; }
         public int Count { get; set; }
         public int PageSize = 2;
         public int PageIndex { get; set; }

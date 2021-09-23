@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MyWebApp.Pages.Article;
 
 
-namespace MyWebApp.Pages._17bang
+namespace SourceStacks.Pages
 {
     public class ContactModel : PageModel
     {

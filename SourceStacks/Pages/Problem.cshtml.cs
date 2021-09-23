@@ -22,7 +22,7 @@ namespace MyWebApp.Pages._17bang
         }
         public void OnGet()
         {
-            PageIndex = Convert.ToInt32(Request.Query["pageIndex"][0]);
+            PageIndex = Convert.ToInt32(Request.Query["pageIndex"][3]);
             Count = repositories.GetCount();
             Contents = repositories.Get(PageIndex, PageSize);
         }

@@ -43,6 +43,7 @@
     <PackageReference Include="AngleSharp" Version="0.16.0" />
     <PackageReference Include="Google.AdWords" Version="24.16.0" />
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.16.0" />
+    <PackageReference Include="Microsoft.Azure.DurableTask.Core" Version="2.5.6" />
     <PackageReference Include="SendGrid" Version="9.24.2" />
     <PackageReference Include="ZendeskApi_v2" Version="3.11.0" />
   </ItemGroup>

@@ -1,10 +1,10 @@
-using MyWebApp.Pages.Article;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ZendeskApi_v2.Models.Articles;
 
-namespace MyWebApp.Pages.Repositories
+namespace SourceStacks.Pages
 {
 	public class Repositories
 	{

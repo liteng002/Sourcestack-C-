@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MyWebApp.Pages.Entity;
 
-namespace MyWebApp.Pages.Filter
+namespace SourceStacks.Pages
 {
     public class NeedLogOnAttribute : Attribute, IPageFilter
     {
@@ -23,12 +22,12 @@ namespace MyWebApp.Pages.Filter
             if (context.HttpContext.Request.Method.ToUpper() == "GET")
             {
 
-                if (context.HttpContext.Session.Keys == null)
-                {
-                    ((PageModel)context.HandlerInstance).TempData[Keys.ErrorMessage]
-                        = $"访问{context.HttpContext.Request.Path}页面需要先登录";
-                    context.Result = new RedirectToPageResult("/Log/On");
-                }//else nothing
+                //if (context.HttpContext.Session.Keys == null)
+                //{
+                //    ((PageModel)context.HandlerInstance).TempData[Keys.ErrorMessage]
+                //        = $"访问{context.HttpContext.Request.Path}页面需要先登录";
+                //    context.Result = new RedirectToPageResult("/Log/On");
+                //}//else nothing
             }//else nothing
 
         }

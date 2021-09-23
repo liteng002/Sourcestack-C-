@@ -1,0 +1,14 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-7">
+        @RenderBody()
+    </div>
+    <div class="col-5">
+        @RenderSection("Description")
+    </div>
+</div>
