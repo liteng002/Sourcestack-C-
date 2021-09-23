@@ -1,18 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SourceStacks.Pages
+namespace SourceStacks.Entities
 {
     public class UserRepository
     {
         private static IList<User> users;
         static UserRepository()
         {
-            users = new List<User> 
+            users = new List<User>
             {
                 new User
                 {

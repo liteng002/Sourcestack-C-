@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MyWebApp.Pages.Article;
-
+using SourceStacks.Entities;
 
 namespace SourceStacks.Pages
 {

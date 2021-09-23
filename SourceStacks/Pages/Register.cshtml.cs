@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using SourceStacks.Entities;
 using SourceStacks.Pages;
 
 namespace SourceStacks.Pages
@@ -27,11 +28,11 @@ namespace SourceStacks.Pages
 
         public void OnGet()
         {
-            User invitedBy = userRepository.GetByName(NewUser.InvitedBy.Name);
+           // User invitedBy = userRepository.GetByName(NewUser.InvitedBy.Name);
 
-            NewUser.InvitedBy = invitedBy;
-            NewUser.Register();
-            userRepository.Save(NewUser);
+            //NewUser.InvitedBy = invitedBy;
+            //NewUser.Register();
+            //userRepository.Save(NewUser);
 
         }
     }

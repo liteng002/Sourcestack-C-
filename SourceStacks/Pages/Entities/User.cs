@@ -1,10 +1,12 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-
-namespace SourceStacks.Pages
+namespace SourceStacks.Entities
 {
-	public class User : Entity
-	{
+    public class User : Entity
+    {
 		public string Name { get; set; }
 		public string Password { get; set; }
 		public User InvitedBy { get; set; }
@@ -22,9 +24,8 @@ namespace SourceStacks.Pages
 		public bool IsMale { get; set; }
 
 		public void Register()
-        {
+		{
 			InvitedBy.BCredit += 10;
-        }
-
+		}
 	}
 }
