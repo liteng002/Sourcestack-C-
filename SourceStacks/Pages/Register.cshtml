@@ -5,29 +5,41 @@
     ViewData["Title"] = "注册·一起帮";
 }
 
+<style>
+    .field-validation-errot {
+        color: red;
+        font-size: 12px;
+    }
+</style>
+
 <form method="post" asp-page="~/Regiter">
     <div style="padding:10px 20px;border:2px dashed;background-color:lightyellow;border-radius:5px;margin-bottom:20px;">
         <div>
             <label> 邀请人：（* 必填，没有邀请人）</label>
             <input asp-for="NewUser.InvitedBy.Name" class="form-control" />
+            <span asp-validation-for="NewUser.InvitedBy.Name"></span>
         </div>
         <div>
             <label> 邀请码：（* 必填）</label>
             <input asp-for="NewUser.InvitedBy.InviteCode" class="form-control" />
+            <span asp-validation-for="NewUser.InvitedBy.InviteCode"></span>
         </div>
     </div>
     <div>
         <label> 用户名：（* 必填）</label>
         <input asp-for="NewUser.Name" class="form-control" />
+        <span asp-validation-for="NewUser.Name"></span>
     </div>
     <div>
-    <label> 密码：（* 必填）</label>
-    <input asp-for="NewUser.Password" class="form-control" />
-</div>
+        <label> 密码：（* 必填）</label>
+        <input asp-for="NewUser.Password" class="form-control" />
+    </div>
     <div>
         <label>确认密码：（* 必填）</label>
         <input asp-for="ConfirmPassword" class="form-control" />
-            </div>
+        <span asp-validation-for="ConfirmPassword"></span>
+
+    </div>
     <input type="submit" class="btn btn-primary" cvalue="提交" />
     <input type="reset" class="btn btn-outline-light" cvalue="重置" />
 </form>
