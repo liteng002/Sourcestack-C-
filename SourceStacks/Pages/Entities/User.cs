@@ -13,12 +13,12 @@ namespace SourceStacks.Entities
         public string Name { get; set; }
         [MinLength(4, ErrorMessage = "* 长度至少4位")]
         public string Password { get; set; }
-        [Required(ErrorMessage = "* 邀请人不能为空")]
+        //[Required(ErrorMessage = "* 邀请人不能为空")]
         public User InvitedBy { get; set; }
         public string ValidatePassword { get; set; }
         public string Captcha { get; set; }
         public int Age { get; set; }
-        [StringLength(4, MinimumLength = 4, ErrorMessage = "* 长度只能为4")]
+        //[StringLength(4, MinimumLength = 4, ErrorMessage = "* 长度只能为4")]
         public string InviteCode { get; set; }
         public int BCredit { get; set; }
 
@@ -29,9 +29,9 @@ namespace SourceStacks.Entities
 
         public bool IsMale { get; set; }
 
-        public void Register()
-        {
-            InvitedBy.BCredit += 10;
-        }
+        //public void Register()
+        //{
+        //    InvitedBy.BCredit += 10;
+        //}
     }
 }

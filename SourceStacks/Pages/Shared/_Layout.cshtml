@@ -11,6 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/StyleSheet.css" />
+    @{ 
+        if (ViewData["HasLogOn"] == null)
+        {
+            ViewData["LogOn"] = "登录";
+            ViewData["SignIn"] = "注册";
+        }
+        else
+        {
+            ViewData["LogOn"] = "已登录";
+            ViewData["LogOff"] = "退出登录";
+        }
+    }
 </head>
 <body>
     <div class="d-flex bd-highlight ; fixed-top" style=" align-items:center ;background-color:aliceblue">
