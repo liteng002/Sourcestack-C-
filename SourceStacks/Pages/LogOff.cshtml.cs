@@ -10,11 +10,13 @@ namespace SourceStacks.Pages
 {
     public class LogOffModel : PageModel
     {
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            Response.Cookies.Delete(Keys.UserId);
-           // return RedirectToPage("/Log/On");
+            //Response.Cookies.Delete(Keys.UserId);
+            //return RedirectToPage("/Log/On");
             //HttpContext.Session.Remove(Keys.Status);
+            HttpContext.Session.Clear();
+            return Redirect(Request.Headers["referer"]);
         }
     }
 }

@@ -10,5 +10,7 @@ namespace SourceStacks.Pages.Entities
         public const string UserId = "UserId";
         public const string ErrorMessage = "ErrorMessage";
         public const string UrlKey = "UrlKey";
+        public const string Status = "Status";
+
     }
 }
