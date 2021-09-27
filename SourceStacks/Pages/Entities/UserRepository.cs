@@ -14,8 +14,23 @@ namespace SourceStacks.Entities
             {
                 new User
                 {
-                    Id = 1,
+                    Id =1,
+                    Name="飞哥",
+                    IsMale=true,
+                    Password="123456",
+                    InviteCode="1234",
+                    Level=9
                 },
+                new User
+                {
+                    Id =2,
+                    Name="小鱼",
+                    IsMale=true,
+                    Password="123456",
+                    InviteCode="1234",
+                    Level=7
+
+                }
             };
         }
 

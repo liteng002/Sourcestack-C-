@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace SourceStacks.Entities
 {
-    public class Repositories 
+    public class Repositories
     {
         static IList<Content> Contents;
 
@@ -24,7 +24,8 @@ namespace SourceStacks.Entities
                     Author=new User{
                         Id=1,
                         Name="飞哥",
-                    },
+                        Level=9
+                                            },
                     keywords=new List<Keyword>
                     {
                         new Keyword
@@ -54,6 +55,8 @@ namespace SourceStacks.Entities
                     Author=new User{
                         Id=1,
                         Name="小鱼",
+                        Level=7
+
                     },
                     keywords=new List<Keyword>
                     {
@@ -112,6 +115,8 @@ namespace SourceStacks.Entities
                     Author=new User{
                         Id=1,
                         Name="飞哥",
+                        Level=9
+
                     },
                     keywords=new List<Keyword>
                     {
@@ -141,6 +146,8 @@ namespace SourceStacks.Entities
                     Author=new User{
                         Id=1,
                         Name="飞哥",
+                        Level=2
+
                     },
                     keywords=new List<Keyword>
                     {
@@ -170,6 +177,8 @@ namespace SourceStacks.Entities
                     Author=new User{
                         Id=1,
                         Name="飞哥",
+                        Level=5
+
                     },
                     keywords=new List<Keyword>
                     {
@@ -199,6 +208,8 @@ namespace SourceStacks.Entities
                     Author=new User{
                         Id=1,
                         Name="飞哥",
+                        Level=3
+
                     },
                     keywords=new List<Keyword>
                     {
@@ -215,40 +226,8 @@ namespace SourceStacks.Entities
                             Name="继承"
                         }
                     }
-
-                },new Content
-                {
-                    Id=8,
-                    Title="Git远程：push / pull / clone / fetch / conflict",
-                    Body="继承使用关键字extends表示继承，super表示基类 public class OnlineStudent extends Student {public OnlineStudent(int age) {super(age);}}final：修饰类/方法，同sealedinstanceof：同is，没有asPerson fg = new Teacher();System.out.println(fg instanceof Person);System.out.println(fg instanceof ",
-                    PublishTime=DateTime.Now,
-                    Answer=100,
-                    Summary=20,
-                    Reward=30,
-                    Author=new User{
-                        Id=1,
-                        Name="飞哥",
-                    },
-                    keywords=new List<Keyword>
-                    {
-                        new Keyword
-                        {
-                            Name="Java"
-                        },
-                        new Keyword
-                        {
-                            Name="面向对象"
-                        },
-                        new Keyword
-                        {
-                            Name="继承"
-                        }
-                    }
-
-                }
-
-
-            };
+                                                        }
+                            };
         }
 
 

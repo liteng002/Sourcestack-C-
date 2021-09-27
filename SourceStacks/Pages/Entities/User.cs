@@ -28,6 +28,8 @@ namespace SourceStacks.Entities
         public string postscript { get; set; }
 
         public bool IsMale { get; set; }
+        public int Level { get; internal set; }
+
 
         //public void Register()
         //{
