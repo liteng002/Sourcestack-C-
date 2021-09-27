@@ -25,8 +25,14 @@ namespace SourceStacks.Pages
             Rememberme = true;
             ViewData["HasLogOn"] = Request.Cookies[Keys.UserId];
         }
-        public void OnPost()
-        {
+		public IActionResult OnPost()
+		{
+
+
+			//点击导航栏“登录”和“注册”，跳转到登录 / 注册页面；完成登录和注册之后能返回之前页面
+			//  点击导航栏“退出登录”（/ LogOff）：
+			// 如果当前页面不需要登录，只刷新不跳转，
+			// 否则跳转到登录页面……
 			User user = userRepositorie.Get(1,1).Where(u => u.Name == NewUser.Name).SingleOrDefault();
 			if (user == null)
 			{
@@ -41,7 +47,7 @@ namespace SourceStacks.Pages
 			}
 			if (!ModelState.IsValid)
 			{
-				return;
+				return RedirectToPage();
 			}//else nothing
 			CookieOptions cookie = new CookieOptions();
 			if (Rememberme)
@@ -51,7 +57,8 @@ namespace SourceStacks.Pages
 
 			Response.Cookies.Append(Keys.UserId, user.Id.ToString(), cookie);
 
-
+			return Redirect(((string[])TempData[Keys.UrlKey])[0]);
+			//return Page();
 		}
-    }
+	}
 }

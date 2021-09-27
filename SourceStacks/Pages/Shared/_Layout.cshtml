@@ -11,7 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/StyleSheet.css" />
-    @{ 
+
+</head>
+<body>
+    @{
         if (ViewData["HasLogOn"] == null)
         {
             ViewData["LogOn"] = "登录";
@@ -23,8 +26,6 @@
             ViewData["LogOff"] = "退出登录";
         }
     }
-</head>
-<body>
     <div class="d-flex bd-highlight ; fixed-top" style=" align-items:center ;background-color:aliceblue">
         <div class="p-2 flex-grow-1 bd-highlight">
             <img src="/Lmage/logo-big.ico" alt="Alternate Text" href="welcome.com" style="margin-left:6%" />

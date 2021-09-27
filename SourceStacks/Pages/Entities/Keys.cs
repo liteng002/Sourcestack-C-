@@ -8,5 +8,7 @@ namespace SourceStacks.Pages.Entities
     public struct Keys
     {
         public const string UserId = "UserId";
+        public const string ErrorMessage = "ErrorMessage";
+        public const string UrlKey = "UrlKey";
     }
 }
