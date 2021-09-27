@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SourceStacks.Entities;
+using SourceStacks.Pages.Filter;
 
 namespace MyWebApp.Pages._17bang
 {
+    [NeedLogon]
     public class ProblemModel : PageModel
     {
         public Repositories repositories;

@@ -8,12 +8,14 @@
 </header>
 <hr />
 @*<div>
-    @section  Wdigets{
-    <p>"1234"</p>
-    }
-</div>*@
+        @section  Wdigets{
+        <p>"1234"</p>
+        }
+    </div>*@
 <main>
     <form method="post" action="Logon.html">
+        <span asp-validation-for="Hint"></span>
+
         <label>用户名：（*必填）</label><br />
         <input asp-for="NewUser.Name" placeholder="不是昵称，是登录用户名" /><br />
         <span asp-validation-for="NewUser.Name"></span>
