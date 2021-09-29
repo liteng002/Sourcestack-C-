@@ -56,7 +56,9 @@ namespace CSharp
 
 
 
-
+        public virtual void Release() {
+            
+        }
 
     }
 }

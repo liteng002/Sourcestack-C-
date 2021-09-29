@@ -7,7 +7,7 @@ namespace CSharp
     //观察一起帮的意见建议（Suggest）抽象出一个父类：内容（Content）
     class Suggest : Content
     {
-        public Suggest(int king) : base(king) 
+        public Suggest(string king) : base(king) 
         {
              
         }

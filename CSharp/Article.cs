@@ -8,7 +8,7 @@ namespace CSharp
     class Article : Content, IClick
     {
 
-        public Article(int king) : base(king) {
+        public Article(string king) : base(king) {
 
         }
 
@@ -51,8 +51,5 @@ namespace CSharp
 
         }
 
-        public static implicit operator Article(Article v) {
-            throw new NotImplementedException();
-        }
     }
 }
