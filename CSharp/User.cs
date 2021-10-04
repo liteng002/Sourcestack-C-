@@ -99,11 +99,11 @@ namespace CSharp
         }
 
         //每一个User对象一定有Name和Password赋值
-        public User(string name,string password)
-        {
-            this.Name = name;
-            this.Password = password;
-        }
+       //public User(string name,string password)
+       // {
+       //     this.Name = name;
+       //     this.Password = password;
+       // }
 
     }
 }
