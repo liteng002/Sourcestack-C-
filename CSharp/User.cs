@@ -94,6 +94,10 @@ namespace CSharp
             throw new NotImplementedException();
         }
 
+        public User() {
+
+        }
+
         //每一个User对象一定有Name和Password赋值
         public User(string name,string password)
         {
